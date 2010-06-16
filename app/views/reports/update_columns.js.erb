@@ -1,0 +1,6 @@
+$('#column_checkbox_container').html("<%= escape_javascript(render :partial => 'checkbox_group', :locals => {:idNameMap => ReportsHelper::ColumnIdNameMap, :selectedKeys =>session[:selector].selectedColumns, :checkbox_container_div => 'column_checkbox_container', :parameterName => 'columns', :title => 'Column Control'})%>")
+
+$('#report_table_div').html("<%= escape_javascript(render :partial => 'report_table')%>")
+$('#report_table').dataTable({"iDisplayLength": 25});
+
+ajaxLinks();

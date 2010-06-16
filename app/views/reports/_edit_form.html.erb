@@ -1,0 +1,165 @@
+
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :name %></div>
+    </div>
+  </div>
+ 
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Developer</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:report, :developer_id, Developer.find(:all, :order => "first, last"), :id, :full_name) %>
+    	</div>
+    </div>
+  </div>
+
+<%   f.fields_for :navigation do |nav_form| %>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Navigation</div>
+    	<div class="yui-u form_element_div">
+    		<%= nav_form.text_field :tier_1, {:size => "2"}%> 
+    		<%= nav_form.text_field :tier_2, {:size => "2"}%>  
+    		<%= nav_form.text_field :tier_3, {:size => "2"}%> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Location</div>
+    	<div class="yui-u form_element_div">
+    		<%= nav_form.text_field :package, {:size => "20"}%> 
+    		<%= nav_form.text_field :category, {:size => "20"}%>  
+    		<%= nav_form.text_field :program, {:size => "20"}%> 
+    	</div>
+    </div>
+  </div>
+  
+<%   end %>
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Worker</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :worker %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:report, :report_status_id, ReportStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Test Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:report, :test_status_id, TestStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Export Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:report, :export_status_id, ExportStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Specs Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:report, :spec_status_id, SpecsStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Usage Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:report, :usage_status_id, UsageStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    	</div>
+    </div>
+  </div>
+
+<%   f.fields_for :description do |description_form| %>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Objective</div>
+    	<div class="yui-u form_element_div">
+    		<%= description_form.text_area :objective, {:rows => '2', :cols	 => '80', :class => 'editor'}%> 
+    	</div>
+    </div>
+  </div>
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Usage</div>
+    	<div class="yui-u form_element_div">
+    		<%= description_form.text_area :usage, {:rows => '2', :cols => '80', :class => 'editor'} %> 
+    	</div>
+    </div>
+  </div>
+<%   end %>
+
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Notes</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_area :notes, {:rows => '2', :cols => '80', :class => 'editor'} %> 
+    	</div>
+    </div>
+  </div>
+  
+  <%   f.fields_for :jtrac do |jtrac_form| %>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">JTrac Code</div>
+    	<div class="yui-u form_element_div">
+    		<%= jtrac_form.text_field :code %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">JTrac Project</div>
+    	<div class="yui-u form_element_div">
+    		<%= jtrac_form.text_field :project%>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">JTrac URL</div>
+    	<div class="yui-u form_element_div">
+    		<%= jtrac_form.text_field :url, {:size => '100'}%> 
+    	</div>
+    </div>
+  </div>
+<%   end %>
+ 
+		
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('form:not(.filter) :input:visible:first').focus();
+		$(".form_element_div :first_child").clickOnEnter('#submit_button');
+  	} );
+</script>
+

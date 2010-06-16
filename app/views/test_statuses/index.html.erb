@@ -1,0 +1,21 @@
+<div class="new_title">Listing Test Statuses</div>
+
+<div class="models_container_div">
+<% @test_statuses.each do |test_status| %>  
+  <div class="model_container_div">
+  	<div class="model_description_div">
+  		<%=test_status.rank %> <%=test_status.status %>
+  	</div>
+  	<div class="model_menu_div">
+    	<div class="model_menu_button_div"><%= link_to 'Edit', edit_test_status_path(test_status) %></div>
+    	<div class="model_menu_button_div"><%= link_to 'Destroy', test_status, :confirm => 'Are you sure?', :method => :delete %></div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<div class="models_menu_div">
+    <div class="model_menu_button_div">
+		<%= link_to 'New', new_test_status_path %>
+	</div>
+</div>

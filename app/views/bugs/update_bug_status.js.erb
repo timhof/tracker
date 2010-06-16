@@ -1,0 +1,10 @@
+$('#open_bugs_div').html("<%= escape_javascript(render :partial => 'reports/show_bug', :collection => @report.open_bugs, :as => :bug) %><%= @report.open_bugs.empty? ? "&nbsp;" : ""%>");
+
+$('#inprogress_bugs_div').html("<%= escape_javascript(render :partial => 'reports/show_bug', :collection => @report.inprogress_bugs, :as => :bug) %><%= @report.inprogress_bugs.empty? ? "&nbsp;" : ""%>");
+
+$('#resolved_bugs_div').html("<%= escape_javascript(render :partial => 'reports/show_bug', :collection => @report.resolved_bugs, :as => :bug) %><%= @report.resolved_bugs.empty? ? "&nbsp;" : ""%>");
+
+$('#bug_tr_<%= @bug.id %>').html("<%= escape_javascript(render :partial => 'bug_tr', :locals => {:bug => @bug})%>");
+$('#bug_table').dataTable();
+
+ajaxLinks();

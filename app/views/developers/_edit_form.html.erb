@@ -1,0 +1,33 @@
+
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">First Name</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :first %>
+    	</div>
+    </div>
+  </div>
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Last Name</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :last %>
+    	</div>
+    </div>
+  </div>
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Email</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :email %>
+    	</div>
+    </div>
+  </div>
+  
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('form:not(.filter) :input:visible:first').focus();
+		$(".form_element_div :first_child").clickOnEnter('#submit_button');
+  	} );
+</script>

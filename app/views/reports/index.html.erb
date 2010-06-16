@@ -1,0 +1,60 @@
+
+<div class="yui-b" id="report_table_div">
+	<%= render :partial => 'report_table' %>
+</div>
+
+<div id="filter_dialog" title="Filters" style="display:none;">
+	<%= render :partial => 'reports/report_filters' %>
+</div>
+
+<div id="columns_dialog" title="Columns" style="display:none;">
+	<%= render :partial => 'reports/report_columns' %>
+	
+</div>
+
+
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#report_table').dataTable({"iDisplayLength": 25});
+		$("#filter_dialog").dialog({
+	      	bgiframe: true, 
+	      	autoOpen: false, 
+	      	modal: true,
+	      	width: '850px',
+			buttons: {
+				Cancel: function() {
+					$(this).dialog('close');
+					$('#filter_commit').val('cancel');
+					$('#filter_form').submit();
+					
+				},
+				'OK': function() {
+					$(this).dialog('close');
+					$('#filter_commit').val('update');
+					$('#filter_form').submit();
+				}
+			}
+	    });
+	    
+	    $("#columns_dialog").dialog({
+	      	bgiframe: true, 
+	      	autoOpen: false, 
+	      	modal: true,
+	      	width: '425px',
+			buttons: {
+				Cancel: function() {
+					$(this).dialog('close');
+					$('#column_commit').val('cancel');
+					$('#column_form').submit();
+					
+				},
+				'OK': function() {
+					$(this).dialog('close');
+					$('#column_commit').val('update');
+					$('#column_form').submit();
+				}
+			}
+	    });
+  	} );
+</script>

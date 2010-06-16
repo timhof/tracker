@@ -1,0 +1,22 @@
+<div class="new_title">New Navigation</div>
+
+<% form_for(@navigation) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="selection_container">
+    <div class="selection_label">Category</div>
+    <div class="selection_element"><%= f.text_field :category %></div>
+  </div>
+  <div class="selection_container">
+    <div class="selection_label">Program</div>
+    <div class="selection_element"><%= f.text_field :program %></div>
+  </div>
+  
+  <div class="selection_container">
+    <div class="submit_button">
+      <%= f.submit 'Create' %>
+    </div>
+  </div>
+<% end %>
+
+<%= link_to 'Back', navigations_path %>

@@ -1,0 +1,26 @@
+
+<div class="yui-b">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0" class="display" id="bug_table">
+		<thead>
+			<tr>
+				<th>Options</th>
+				<th>Report</th>
+				<th>Name</th>
+				<th>Maintainer</th>
+				<th>Status</th>
+			</tr>
+		</thead>
+		<tbody>
+<% @bugs.each do |bug| %>  
+	  		<%= render :partial => 'bug_tr', :locals => {:bug => bug} %>
+<% end %>
+		</tbody>
+	</table>
+</div>
+
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#bug_table').dataTable();
+  	} );
+  </script>

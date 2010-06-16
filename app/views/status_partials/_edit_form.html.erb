@@ -1,0 +1,23 @@
+
+  <div class="yui-b">
+    <div class="yui-gf">
+        <div class="yui-u first">Status</div>
+    	<div class="yui-u">
+    		<%= f.text_field :status %> 
+    	</div>
+    </div>
+  </div>
+  <div class="yui-b">
+    <div class="yui-gf">
+        <div class="yui-u first">Rank</div>
+    	<div class="yui-u">
+    		<%= f.text_field :rank %> 
+    	</div>
+    </div>
+  </div>
+  
+  <script type="text/javascript">
+  	$(document).ready(function() {
+		$('form:not(.filter) :input:visible:first').focus();
+  	} );
+</script>

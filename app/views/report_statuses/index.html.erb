@@ -1,0 +1,21 @@
+<div class="new_title">Listing Report Statuses</div>
+
+<div class="models_container_div">
+<% @report_statuses.each do |report_status| %>  
+  <div class="model_container_div">
+  	<div class="model_description_div">
+  		<%=report_status.rank %> <%=report_status.status %>
+  	</div>
+  	<div class="model_menu_div">
+    	<div class="model_menu_button_div"><%= link_to 'Edit', edit_report_status_path(report_status) %></div>
+    	<div class="model_menu_button_div"><%= link_to 'Destroy', report_status, :confirm => 'Are you sure?', :method => :delete %></div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<div class="models_menu_div">
+    <div class="model_menu_button_div">
+		<%= link_to 'New', new_report_status_path %>
+	</div>
+</div>

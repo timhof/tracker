@@ -1,0 +1,2 @@
+module TestStatusesHelper
+end

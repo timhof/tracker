@@ -1,0 +1,12 @@
+<div class="new_title">New Export Status</div>
+
+<% form_for(@export_status) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => 'status_partials/edit_form', :locals => {:f => f} %>
+  
+  <div class="form_button_container">
+	<%= f.submit 'Create' %>
+	<%= f.submit 'Cancel' %>
+  </div>
+<% end %>

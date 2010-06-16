@@ -1,0 +1,2 @@
+module JTracsHelper
+end

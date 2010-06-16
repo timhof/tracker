@@ -1,0 +1,20 @@
+<div class="new_title">Listing navigations</div>
+
+<div class="models_container_div">
+<% @navigations.each do |navigation| %>
+  <div class="model_container_div">
+  	<div class="model_description_div">
+  		(<%= navigation.tier_1 %>_<%= navigation.tier_2 %>_<%= navigation.tier_3 %>_0) <%= navigation.program %>
+  	</div>
+  	<div class="model_menu_div">
+    	<div class="model_menu_button_div"><%= link_to 'Show', navigation %></div>
+    	<div class="model_menu_button_div"><%= link_to 'Edit', edit_navigation_path(navigation) %></div>
+    	<div class="model_menu_button_div"><%= link_to 'Destroy', navigation, :confirm => 'Are you sure?', :method => :delete %></div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<div class="new_model_link_div">
+	<%= link_to 'New navigation', new_navigation_path %>
+</div>

@@ -1,0 +1,14 @@
+
+<div>
+	<div class="show_container">
+	<div class="show_label">Name</div>
+	<div class="show_element"><%= @report.location %></div>
+</div>
+<div class="show_link_container_div">
+	<div class="show_link_div">
+		<%= link_to 'Edit', edit_navigation_path(@navigation) %>
+	</div>
+	<div class="show_link_div">
+		<%= link_to 'Back', navigations_path %>
+	</div>
+</div>

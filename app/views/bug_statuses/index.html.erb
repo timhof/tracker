@@ -1,0 +1,11 @@
+<div class="yui-b">Listing Test Statuses</div>
+
+<div class="yui-b">
+<% @bug_statuses.each do |bug_status| %>  
+	<div class="yui-b">
+  		<%=bug_status.rank %> <%=bug_status.status %>
+    	<%= link_to 'Edit', edit_bug_status_path(bug_status) %>
+    	<%= link_to 'Destroy', bug_status, :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+<% end %>
+</div>

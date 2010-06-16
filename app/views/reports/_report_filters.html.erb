@@ -1,0 +1,16 @@
+
+<%	form_tag (filter_reports_path, {:class => 'ajaxForm', :id => 'filter_form' }) do %>
+	<div class="yui-b"><div class="yui-g">
+		<div id="nav_checkbox_container" class="yui-u first">
+<%=		render :partial => 'checkbox_group', :locals => {:idNameMap => session[:selector].tier2IdNameMap, :selectedKeys =>session[:selector].selectedTier2, :checkbox_container_div => 'nav_checkbox_container', :parameterName => 'tier_1_2', :title => 'Navigation Filter'}%>
+		</div>
+		<div id="maintainer_checkbox_container" class="yui-u">
+<%=		render :partial => 'checkbox_group', :locals => {:idNameMap => session[:selector].maintainerIdNameMap, :selectedKeys =>session[:selector].selectedMaintainer, :checkbox_container_div => 'maintainer_checkbox_container', :parameterName => 'maintainer', :title => 'Maintainer Filter'}%>
+		</div>
+		<div id="status_checkbox_container" class="yui-u">
+<%=		render :partial => 'checkbox_group', :locals => {:idNameMap => session[:selector].reportStatusIdNameMap, :selectedKeys =>session[:selector].selectedReportStatus, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'status', :title => 'Status Filter'}%>
+		</div>
+	</div></div>
+	<input type="hidden" id="filter_commit" name="filter_commit" value="update" />
+<% 	end %>
+		

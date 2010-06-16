@@ -1,0 +1,123 @@
+
+		<table width="100%" cellpadding="0" cellspacing="0" border="0" class="display" id="report_table">
+		<thead>
+			<tr>
+			<% if session[:selector].selectedColumns[:options] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:options]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:name] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:name]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:package] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:package]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:category] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:category]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:program] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:program]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:nav_key] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:nav_key]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:maintainer] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:maintainer]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:status] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:test_status] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:test_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:export_status] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:export_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:specs_status] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:specs_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:usage_status] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:usage_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:open_bugs] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:open_bugs]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:inprogress_bugs] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:inprogress_bugs]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:resolved_bugs] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:resolved_bugs]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:worker] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:worker]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:jtrac] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:jtrac]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:date_updated] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:date_updated]%></th>
+			<% end %>
+			</tr>
+		</thead>
+		<tbody>
+<% @reports.each do |report| %>  
+	  		<tr class="report_row<%= report.has_unresolved_bugs? ? " has_bugs" : "" %>">
+			<% if session[:selector].selectedColumns[:options] == '1' %>
+	  			<td class="nowrap_cell">
+	    		 	 <%= render :partial => 'options', :locals => {:report => report} %>
+	    		</td>
+			<% end
+			   if session[:selector].selectedColumns[:name] == '1' %>
+	  			<td class="nowrap_cell"><%= report.name %></td>
+			<% end
+			   if session[:selector].selectedColumns[:package] == '1' %>
+	  			<td><%= report.package %></td>
+			<% end
+			   if session[:selector].selectedColumns[:category] == '1' %>
+	  			<td><%= report.category %></td>
+			<% end
+			   if session[:selector].selectedColumns[:program] == '1' %>
+	  			<td><%= report.program %></td>
+			<% end
+			   if session[:selector].selectedColumns[:nav_key] == '1' %>
+	  			<td><%= report.nav_key %></td>
+			<% end
+			   if session[:selector].selectedColumns[:maintainer] == '1' %>
+	  			<td class="nowrap_cell"><%= report.maintainer %> <%= render :partial => 'developers/options', :locals => {:developer => report.developer} %></td>
+			<% end
+			   if session[:selector].selectedColumns[:status] == '1' %>
+	  			<td><%= report.current_status %></td>
+			<% end
+			   if session[:selector].selectedColumns[:test_status] == '1' %>
+	  			<td><%= report.testability %></td>
+			<% end
+			   if session[:selector].selectedColumns[:export_status] == '1' %>
+	  			<td><%= report.exportability %></td>
+			<% end
+			   if session[:selector].selectedColumns[:specs_status] == '1' %>
+	  			<td><%= report.spec_profiles %></td>
+			<% end
+			   if session[:selector].selectedColumns[:usage_status] == '1' %>
+	  			<td><%= report.user_usage %></td>
+			<% end
+			   if session[:selector].selectedColumns[:open_bugs] == '1' %>
+	  			<td><%= report.open_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:inprogress_bugs] == '1' %>
+	  			<td><%= report.inprogress_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:resolved_bugs] == '1' %>
+	  			<td><%= report.resolved_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:worker] == '1' %>
+	  			<td><%= report.worker %></td>
+			<% end
+			   if session[:selector].selectedColumns[:jtrac] == '1' %>
+	  			<td><%= link_to report.jtrac_code, report.jtrac_url %></td>
+			<% end
+			   if session[:selector].selectedColumns[:date_updated] == '1' %>
+	  			<td><%= report.updated_at.strftime("%m/%d/%Y %H:%M") %></td>
+			<% end %>
+	  		</tr>
+<%	end %>
+		</tbody>
+		</table>

@@ -1,0 +1,27 @@
+
+<div class="yui-b">
+	<div class="yui-b"><div class="yui-gd">
+    	<div class="yui-u first">Name</div>
+		<div class="yui-u"><%= @bug.name %> <%= render :partial => 'options', :locals => {:report => @report, :bug => @bug} %></div>
+	</div></div>
+	<div class="yui-b"><div class="yui-gd">
+    	<div class="yui-u first">Report Name</div>
+		<div class="yui-u"><%= @bug.report.location %> <%= render :partial => 'reports/options', :locals => {:report => @bug.report} %></div>
+	</div></div>
+	<div class="yui-b"><div class="yui-gd">
+    	<div class="yui-u first">Maintainer</div>
+		<div class="yui-u"><%= @bug.report.maintainer %> <%= render :partial => 'developers/options', :locals => {:developer => @bug.report.developer} %></div>
+	</div></div>
+	<div class="yui-b"><div class="yui-gd">
+    	<div class="yui-u first">Status</div>
+		<div class="yui-u"><%= @bug.current_status %></div>
+	</div></div>
+	<div class="yui-b"><div class="yui-gd">
+    	<div class="yui-u first">Description</div>
+		<div class="yui-u"><%= @bug.description_html %></div>
+	</div></div>
+	<div class="yui-b" style="display:none;"><div class="yui-gd">
+    	<div class="yui-u first">Notes</div>
+		<div class="yui-u"><%= @bug.notes_html %></div>
+	</div></div>
+</div>

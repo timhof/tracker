@@ -1,0 +1,168 @@
+<!DOCTYPE HTML>
+<html><head>
+
+
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Project Tracker</title>
+  
+  <link rel="stylesheet" type="text/css" 
+href="edit_files/reset-fonts-grids.css">
+ 
+	
+  <link href="edit_files/scaffold.css" media="screen" rel="stylesheet" 
+type="text/css">
+  <link type="text/css" rel="stylesheet" media="screen" 
+href="edit_files/demo_page.css">
+  <link type="text/css" rel="stylesheet" media="screen" 
+href="edit_files/demo_table.css">
+  <link type="text/css" href="edit_files/jquery_002.css" 
+rel="stylesheet">
+   <link type="text/css" rel="stylesheet" href="edit_files/jquery.css">
+  <link rel="stylesheet" type="text/css"><script src="edit_files/jquery_007.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_011.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_005.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_006.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_008.js" type="text/javascript"></script>
+  <script src="edit_files/jquery.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_003.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_004.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_009.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_010.js" type="text/javascript"></script>
+  <script src="edit_files/jquery_012.js" type="text/javascript"></script>
+  
+  <script src="edit_files/jquery_002.js" type="text/javascript"></script>
+  <script src="edit_files/showdown.js" type="text/javascript"></script>
+
+
+
+
+  	<script type="text/javascript">
+  	//<![CDATA[
+	        window._auth_token_name = "#{request_forgery_protection_token}";
+	        window._auth_token = "#{form_authenticity_token}";
+    //]]>
+	</script>
+
+  <script src="edit_files/application.js" type="text/javascript"></script>
+  
+</head><body>
+<div id="doc3">
+	<div id="hd" class="header">
+		PROJECT TRACKER
+	</div>
+
+	<div id="bd">
+		<div> 
+			<div id="menu">
+				<div class="menu_button">Reports</div>
+				<div class="submenu_div">
+					<div class="submenu_button" 
+onclick="window.location.href='/reports'">List</div>
+					<div class="submenu_button" 
+onclick="window.location.href='/reports/new'">Add New</div>
+					<div class="submenu_button" 
+onclick="javascript:show_filters_dialog();" %="">Filter</div>
+					<div class="submenu_button" 
+onclick="javascript:show_reports_columns_dialog();" %="">Columns</div>
+				</div>
+				<div class="menu_button">Developers</div>
+				<div class="submenu_div">
+					<div class="submenu_button" 
+onclick="window.location.href='/developers'">List</div>
+					<div class="submenu_button" 
+onclick="window.location.href='/developers/new'">Add New</div>
+				</div>
+				<div class="menu_button">Bugs</div>
+				<div class="submenu_button" 
+onclick="window.location.href='/all_bugs'">List</div>
+			</div>
+	        <div style="width: 80%; float: left;"> 
+				<div>
+					<div id="flash_div"></div>
+					<div id="template_div">
+						<form action="/developers/9" class="edit_developer" 
+id="edit_developer_9" method="post"><div style="margin: 0pt; padding: 
+0pt;"><input name="_method" value="put" type="hidden"><input 
+name="authenticity_token" 
+value="IwUt3TON0UeBaCAC5Wo1HHYhJQmWA0yWMlZ4KW7hB+U=" type="hidden"></div>
+  
+  
+  
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">First Name</div>
+    	<div class="yui-u form_element_div">
+    		<input id="developer_first" name="developer[first]" size="30" 
+value="*" type="text">
+    	</div>
+    </div>
+  </div>
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Last Name</div>
+    	<div class="yui-u form_element_div">
+    		<input id="developer_last" name="developer[last]" size="30" 
+value="Unassigned" type="text">
+    	</div>
+    </div>
+  </div>
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Email</div>
+    	<div class="yui-u form_element_div">
+    		<input id="developer_email" name="developer[email]" size="30" 
+type="text">
+    	</div>
+    </div>
+  </div>
+  
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('form:not(.filter) :input:visible:first').focus();
+		$(".form_element_div :first_child").clickOnEnter('#submit_button');
+  	} );
+</script>
+
+ <div class="form_button_container">
+	<input class="button" id="submit_button" name="commit" value="Update" 
+type="submit">
+	<input class="button" id="cancel_button" name="commit" value="Cancel" 
+type="submit">
+  </div>
+</form>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('.menu_button').mouseover(function(){
+			$(this).addClass('menu_mouseover');
+		});
+		$('.submenu_button').mouseover(function(){
+			$(this).addClass('submenu_mouseover');
+		});
+		$('.menu_button').mouseout(function(){
+			$(this).removeClass('menu_mouseover');
+		});
+		$('.submenu_button').mouseout(function(){
+			$(this).removeClass('submenu_mouseover');
+		});
+	
+		$('.button').mouseover(function(){
+			$(this).addClass('button_mouseover');
+		});
+		$('.button').mouseout(function(){
+			$(this).removeClass('button_mouseover');
+		});
+		
+		 $('.editor').markedit();
+  	} );
+</script>
+</body></html>

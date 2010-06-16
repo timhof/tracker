@@ -1,0 +1,12 @@
+<h1>Editing navigation</h1>
+
+<% form_for(@navigation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @navigation %> |
+<%= link_to 'Back', navigations_path %>

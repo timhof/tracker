@@ -1,0 +1,21 @@
+<div class="new_title">Listing Specs Statuses</div>
+
+<div class="models_container_div">
+<% @specs_statuses.each do |specs_status| %>  
+  <div class="model_container_div">
+  	<div class="model_description_div">
+  		<%=specs_status.rank %> <%=specs_status.status %>
+  	</div>
+  	<div class="model_menu_div">
+    	<div class="model_menu_button_div"><%= link_to 'Edit', edit_specs_status_path(specs_status) %></div>
+    	<div class="model_menu_button_div"><%= link_to 'Destroy', specs_status, :confirm => 'Are you sure?', :method => :delete %></div>
+    </div>
+  </div>
+<% end %>
+</div>
+
+<div class="models_menu_div">
+    <div class="model_menu_button_div">
+		<%= link_to 'New', new_specs_status_path %>
+	</div>
+</div>

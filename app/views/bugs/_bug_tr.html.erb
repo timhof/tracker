@@ -1,0 +1,12 @@
+
+<tr id="bug_tr_<%= bug.id %>">
+	<td class="nowrap_cell">
+	 	<%= render :partial => 'options', :locals => {:report => bug.report, :bug => bug} %>
+	</td>
+	<td class="nowrap_cell"><%= bug.report.name %> <%= render :partial => 'reports/options', :locals => {:report => bug.report} %></td>
+	<td>
+	 	<%= bug.name %>
+	</td>
+	<td class="nowrap_cell"><%= bug.report.maintainer %></td>
+	<td><%= bug.current_status %></td>	 			
+</tr>

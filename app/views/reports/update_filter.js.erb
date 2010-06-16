@@ -1,0 +1,9 @@
+
+$('#nav_checkbox_container').html("<%= escape_javascript(render :partial => 'checkbox_group', :locals => {:idNameMap => session[:selector].tier2IdNameMap, :selectedKeys =>session[:selector].selectedTier2, :checkbox_container_div => 'nav_checkbox_container', :parameterName => 'tier_1_2', :title => 'Navigation Filter'})%>");
+
+$('#maintainer_checkbox_container').html("<%= escape_javascript(render :partial => 'checkbox_group', :locals => {:idNameMap => session[:selector].maintainerIdNameMap, :selectedKeys =>session[:selector].selectedMaintainer, :checkbox_container_div => 'maintainer_checkbox_container', :parameterName => 'maintainer', :title => 'Maintainer Filter'})%>");
+
+$('#report_table_div').html("<%= escape_javascript(render :partial => 'report_table')%>");
+$('#report_table').dataTable({"iDisplayLength": 25});
+
+ajaxLinks();
