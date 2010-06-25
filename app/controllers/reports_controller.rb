@@ -15,6 +15,35 @@ class ReportsController < ApplicationController
     end
   end
   
+  def index_print
+    
+   	set_filtered_reports
+
+    respond_to do |format|
+      format.html {render :layout => false}
+      format.xml  { render :xml => @reports }
+    end
+  end
+  
+  def summary_report
+  	StatusValue.new(0, 'whymustidothis')
+  	
+  	@developers = Developer.find(:all, :conditions => 'report_rank >= 0', :order => 'report_rank asc')
+  	@issues = Issue.find(:all, :conditions => "issue_status_id <> #{IssueStatus::RESOLVED.id}")
+  	
+  	@all_reports = Report.find(:all, :include => :navigation, :order => "navigations.tier_1 asc, navigations.tier_2 asc, navigations.tier_3 asc")
+	@reports = @all_reports.select {|report| 
+		session[:selector].selectedTier2[report.nav_tier_2] == '1' &&
+		session[:selector].selectedMaintainer[report.developer_id] == '1' &&
+		session[:selector].selectedReportStatus[report.report_status_id] == '1'
+	}
+	
+  	respond_to do |format|
+      format.html {render :layout => false}
+      format.xml  { render :xml => @reports }
+    end
+  end
+  
   def filter_reports
   	
   	@all_reports = Report.find(:all)
@@ -47,19 +76,11 @@ class ReportsController < ApplicationController
   def set_filtered_reports
   	
   	@all_reports = Report.find(:all)
-	@reports = []
-	@all_reports.each do |report| 
-		if session[:selector].selectedTier2[report.nav_tier_2] == '0'
-			next
-		end
-		if session[:selector].selectedMaintainer[report.developer_id] == '0'
-			next
-		end
-		if session[:selector].selectedReportStatus[report.report_status_id] == '0'
-			next
-		end
-		@reports << report
-	end
+	@reports = @all_reports.select {|report| 
+		session[:selector].selectedTier2[report.nav_tier_2] == '1' &&
+		session[:selector].selectedMaintainer[report.developer_id] == '1' &&
+		session[:selector].selectedReportStatus[report.report_status_id] == '1'
+	}
   end
   
 	
@@ -111,9 +132,9 @@ class ReportsController < ApplicationController
   # POST /reports.xml
   def create
     @report = Report.new(params[:report])
-	session[:selector].confirm_report_data
     respond_to do |format|
       if params[:commit].eql?('Create') && @report.save
+		session[:selector].confirm_report_data
         flash[:notice] = 'Report was successfully created.'
         format.html { redirect_to(reports_url) }
         format.xml  { render :xml => @report, :status => :created, :location => @report }
@@ -133,9 +154,10 @@ class ReportsController < ApplicationController
 	session[:selector].confirm_report_data
 
     respond_to do |format|
-    	success = true
+      success = true
       if params[:commit].eql?('Update')
       	success = @report.update_attributes(params[:report])
+		session[:selector].confirm_report_data
         flash[:notice] = 'Report was successfully updated.'
       end
       if success
@@ -147,6 +169,16 @@ class ReportsController < ApplicationController
       end
     end
   end
+  
+  def update_report_status
+    @report = Report.find(params[:id])
+    reportStatus = ReportStatus.find(params[:report_status_id])
+    @report.report_status = reportStatus
+    @report.save
+    respond_to do |format|
+      format.js {render :layout => false}
+    end
+  end
 
   # DELETE /reports/1
   # DELETE /reports/1.xml
@@ -154,6 +186,7 @@ class ReportsController < ApplicationController
     @report = Report.find(params[:id])
     @report.destroy
 
+	session[:selector].confirm_report_data
     respond_to do |format|
       format.html { redirect_to(reports_url) }
       format.xml  { head :ok }
@@ -178,8 +211,9 @@ class ReportsController < ApplicationController
 			session[:selector].selectedMaintainer[report.developer_id] = '0'
 		end
 	end
+	StatusValue.new(0, 'whymustidothis')
 	
-	@report_statuses = ReportStatus.find(:all).each do |status|
+	@report_statuses = ReportStatus.values.each do |status|
 		if (not params[:status].nil?) && (params[:status][status.id.to_s] == '1')
 			session[:selector].selectedReportStatus[status.id] = '1'
 		else

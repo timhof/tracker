@@ -1,0 +1,32 @@
+<% StatusValue.new(0, 'whymustidothis') %>
+<div class="yui-b">
+	<table width="100%" cellpadding="0" cellspacing="0" border="0" class="display" id="report_table">
+		<thead>
+			<tr>
+				<th>&nbsp;</th>
+				<th>Name</th>
+				<th>Status</th>
+				<th>Originator</th>
+				<th>Owner</th>
+			</tr>
+		</thead>
+		<tbody>
+<% @issues.each do |issue| %> 
+	  		<tr>
+				<td class="nowrap_cell"><%= render :partial => 'options', :locals => {:issue => issue} %></td>
+				<td><%= issue.name %></td>
+				<td><%= issue.current_status %></td>
+				<td><%= issue.originator.full_name %></td>
+				<td><%= issue.owner.full_name %></td>
+	  		</tr>
+<%	end %>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#report_table').dataTable({"iDisplayLength": 25});
+	});
+</script>
+

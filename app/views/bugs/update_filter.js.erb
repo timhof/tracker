@@ -1,0 +1,10 @@
+
+$('#status_checkbox_container').html("<%= escape_javascript(render :partial => 'reports/checkbox_group', :locals => {:idNameMap => session[:selector].bugStatusIdNameMap, :selectedKeys =>session[:selector].selectedBugStatus, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'status', :title => 'Status Filter'})%>");
+
+$('#bug_table_div').html("<%= escape_javascript(render :partial => 'bug_table')%>");
+$('#bug_table').dataTable({
+	"iDisplayLength": 25,
+	"aaSorting": [[5, "asc"]]
+});
+
+ajaxLinks();

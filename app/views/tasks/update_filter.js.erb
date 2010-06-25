@@ -1,0 +1,9 @@
+
+$('#status_checkbox_container').html("<%= escape_javascript(render :partial => 'reports/checkbox_group', :locals => {:idNameMap => session[:selector].taskStatusIdNameMap, :selectedKeys =>session[:selector].selectedTaskStatus, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'status', :title => 'Status Filter'})%>");
+
+$('#task_table_div').html("<%= escape_javascript(render :partial => 'task_table')%>");
+$('#task_table').dataTable({
+	"iDisplayLength": 25,
+});
+
+ajaxLinks();

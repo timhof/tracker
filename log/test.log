@@ -1,0 +1,28 @@
+  [4;36;1mReport Load (1.0ms)[0m   [0;1mSELECT * FROM "reports" WHERE ("reports"."id" = 43775566) [0m
+  [4;35;1mDescription Load (1.0ms)[0m   [0mSELECT * FROM "descriptions" WHERE ("descriptions"."id" = 167723383) [0m
+  [4;36;1mReport Load (1.0ms)[0m   [0;1mSELECT * FROM "reports" WHERE ("reports"."id" = 43775566) [0m
+  [4;35;1mDescription Load (0.0ms)[0m   [0mSELECT * FROM "descriptions" WHERE ("descriptions"."id" = 167723383) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 575589987) [0m
+  [4;35;1mJTrac Load (1.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 130604785) [0m
+  [4;36;1mReportStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "report_statuses" WHERE ("report_statuses"."id" = 7441486) [0m
+  [4;35;1mExportStatus Load (0.0ms)[0m   [0mSELECT * FROM "export_statuses" WHERE ("export_statuses"."id" = 7441486) [0m
+  [4;36;1mReport Load (0.0ms)[0m   [0;1mSELECT * FROM "reports" WHERE ("reports"."id" = 43775566) [0m
+  [4;35;1mDescription Load (0.0ms)[0m   [0mSELECT * FROM "descriptions" WHERE ("descriptions"."id" = 167723383) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 575589987) [0m
+  [4;35;1mJTrac Load (1.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 130604785) [0m
+  [4;36;1mReportStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "report_statuses" WHERE ("report_statuses"."id" = 7441486) [0m
+  [4;35;1mExportStatus Load (0.0ms)[0m   [0mSELECT * FROM "export_statuses" WHERE ("export_statuses"."id" = 7441486) [0m
+  [4;36;1mSpecsStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "specs_statuses" WHERE ("specs_statuses"."id" = 7441486) [0m
+  [4;35;1mTestStatus Load (0.0ms)[0m   [0mSELECT * FROM "test_statuses" WHERE ("test_statuses"."id" = 7441486) [0m
+  [4;36;1mDeveloper Load (1.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 361485326) [0m
+  [4;35;1mReport Create (0.0ms)[0m   [0mINSERT INTO "reports" ("name", "report_status_id", "created_at", "usage_status_id", "notes", "updated_at", "spec_status_id", "jtrac_id", "developer_id", "navigation_id", "export_status_id", "test_status_id", "description_id", "worker") VALUES('AMT Allocation', NULL, '2010-06-17 23:08:17', NULL, 'AMT Allocation Notes', '2010-06-17 23:08:17', 7441486, 130604785, 361485326, 575589987, 7441486, 7441486, 167723383, 'AMTAllocationWorker')[0m
+  [4;36;1mReport Load (1.0ms)[0m   [0;1mSELECT * FROM "reports" WHERE ("reports"."id" = 43775566) [0m
+  [4;35;1mDescription Load (0.0ms)[0m   [0mSELECT * FROM "descriptions" WHERE ("descriptions"."id" = 167723383) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 575589987) [0m
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 130604785) [0m
+  [4;36;1mReportStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "report_statuses" WHERE ("report_statuses"."id" = 7441486) [0m
+  [4;35;1mExportStatus Load (1.0ms)[0m   [0mSELECT * FROM "export_statuses" WHERE ("export_statuses"."id" = 7441486) [0m
+  [4;36;1mSpecsStatus Load (0.0ms)[0m   [0;1mSELECT * FROM "specs_statuses" WHERE ("specs_statuses"."id" = 7441486) [0m
+  [4;35;1mTestStatus Load (0.0ms)[0m   [0mSELECT * FROM "test_statuses" WHERE ("test_statuses"."id" = 7441486) [0m
+  [4;36;1mDeveloper Load (1.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 361485326) [0m
+  [4;35;1mReport Create (1.0ms)[0m   [0mINSERT INTO "reports" ("name", "report_status_id", "created_at", "usage_status_id", "notes", "updated_at", "spec_status_id", "jtrac_id", "developer_id", "navigation_id", "export_status_id", "test_status_id", "description_id", "worker") VALUES('AMT Allocation', NULL, '2010-06-17 23:13:02', NULL, 'AMT Allocation Notes', '2010-06-17 23:13:02', 7441486, 130604785, 361485326, 575589987, 7441486, 7441486, 167723383, 'AMTAllocationWorker')[0m

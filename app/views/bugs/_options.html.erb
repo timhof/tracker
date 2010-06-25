@@ -1,16 +1,18 @@
+
+<% StatusValue.new(0, 'whymustidothis') %>
 <%= link_to image_tag("/images/icons/magnifier.png"), [report, bug] %>
 <%= link_to image_tag("/images/icons/edit-signiture.png"), edit_report_bug_path(report, bug) %>
 <%= link_to image_tag("/images/icons/cross-script.png"), [report, bug], :confirm => 'Are you sure?', :method => :delete, :title => 'Delete Bug' %>
 <%= link_to image_tag("/images/icons/mail-send.png"), email_bug_path(bug.id), :class => "get" %>
 
 <% unless bug.is_open %>
-<%= link_to image_tag("/images/icons/bug--exclamation.png"), update_bug_status_path(bug.id, 1), :class => "get" %>
+<%= link_to image_tag("/images/icons/bug--exclamation.png"), update_bug_status_path(bug.id, BugStatus::OPEN.id), :class => "get" %>
 <% end %>
 <% unless bug.is_inprogress || true %>
-<%= link_to 'P', update_bug_status_path(bug.id, 2), :class => "get" %>
+<%= link_to 'P', update_bug_status_path(bug.id, BugStatus::INPROGRESS.id), :class => "get" %>
 <% end %>
 <% unless bug.is_resolved %>
-<%= link_to image_tag("/images/icons/tick.png"), update_bug_status_path(bug.id, 3), :class => "get" %>
+<%= link_to image_tag("/images/icons/tick.png"), update_bug_status_path(bug.id, BugStatus::RESOLVED.id), :class => "get" %>
 <% end %>
 
 

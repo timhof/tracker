@@ -1,0 +1,142 @@
+	<% StatusValue.new(0, 'whymustidothis') %>
+<html>
+<head>
+  <title>Project Tracker</title>
+</head>
+<body>
+	<div class="yui-b" style="text-align: center;">
+	
+		<table style="width:100%;border-collapse:collapse;border: 1px solid #4C5275;">
+		<thead>
+			<tr>
+			<% if session[:selector].selectedColumns[:name] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:name]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:package] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:package]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:category] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:category]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:program] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:program]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:nav_key] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:nav_key]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:maintainer] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:maintainer]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:status] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:test_status] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:test_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:export_status] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:export_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:specs_status] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:specs_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:usage_status] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:usage_status]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:open_bugs] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:open_bugs]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:inprogress_bugs] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:inprogress_bugs]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:resolved_bugs] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:resolved_bugs]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:worker] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:worker]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:jtrac] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:jtrac]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:date_updated] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:date_updated]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:notes] == '1' %>
+				<th style="height:25px;border:1px solid #4C5275;background-color:#999CAF;color:white;"><%=ReportsHelper::ColumnIdNameMap[:notes]%></th>
+			<% end %>
+			</tr>
+		</thead>
+		<tbody>
+<% @reports.each_with_index do |report, index| 
+	style = 'color:black;'
+	if report.has_unresolved_bugs?
+	  style = 'color:red;font-weight:bold;'
+	elsif report.current_status == ReportStatus::PLANNING
+	  style = 'color:green;font-weight:bold;'
+	 elsif report.current_status == ReportStatus::INPROGRESS
+	  style = 'color:blue;font-weight:bold;'
+	end 
+	style += "background-color:#{index % 2 == 1 ? '#EDEDED' : '#FFFFFF' };"%>  
+	  		<tr style="<%= style %>;">
+			<% if session[:selector].selectedColumns[:name] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.name %></td>
+			<% end
+			   if session[:selector].selectedColumns[:package] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.package %></td>
+			<% end
+			   if session[:selector].selectedColumns[:category] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.category %></td>
+			<% end
+			   if session[:selector].selectedColumns[:program] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.program %></td>
+			<% end
+			   if session[:selector].selectedColumns[:nav_key] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.nav_key %></td>
+			<% end
+			   if session[:selector].selectedColumns[:maintainer] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.maintainer %></td>
+			<% end
+			   if session[:selector].selectedColumns[:status] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.current_status_label %></td>
+			<% end
+			   if session[:selector].selectedColumns[:test_status] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.testability %></td>
+			<% end
+			   if session[:selector].selectedColumns[:export_status] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.exportability %></td>
+			<% end
+			   if session[:selector].selectedColumns[:specs_status] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.spec_profiles %></td>
+			<% end
+			   if session[:selector].selectedColumns[:usage_status] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.user_usage %></td>
+			<% end
+			   if session[:selector].selectedColumns[:open_bugs] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.open_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:inprogress_bugs] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.inprogress_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:resolved_bugs] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.resolved_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:worker] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.worker %></td>
+			<% end
+			   if session[:selector].selectedColumns[:jtrac] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= link_to report.jtrac_code, report.jtrac_url %></td>
+			<% end
+			   if session[:selector].selectedColumns[:date_updated] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.updated_at.strftime("%m/%d/%Y %H:%M") %></td>
+			<% end
+			   if session[:selector].selectedColumns[:notes] == '1' %>
+	  			<td style="white-space:nowrap;height:25px;vertical-align:bottom;padding:3px;border:1px solid #4C5275;"><%= report.notes_html %></td>
+			<% end %>
+	  		</tr>
+<%	end %>
+		</tbody>
+		</table>
+
+	</div>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<% StatusValue.new(0, 'whymustidothis') %>
+<div class="yui-b">
+    <div class="yui-b show_div"><div class="yui-gd">
+    <div class="yui-u first show_label">Name</div>
+	<div class="yui-u"><%= @task.name %>  <%= render :partial => 'options', :locals => {:task => @task} %></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Developer</div>
+		<div class="yui-u"><%= @task.developer.full_name %></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Status</div>
+		<div class="yui-u"><%= @task.current_status_label %></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Description</div>
+		<div class="yui-u"><%= @task.description_html %></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Notes</div>
+		<div class="yui-u"><%= @task.notes_html %></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">JTrac</div>
+		<div class="yui-u"><%= link_to @task.jtrac_url,  @task.jtrac_url %></div>
+	</div></div>
+</div>

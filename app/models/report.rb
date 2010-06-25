@@ -1,9 +1,5 @@
 class Report < ActiveRecord::Base
-	belongs_to :report_status
-	belongs_to :test_status
-	belongs_to :specs_status, :foreign_key => "spec_status_id"
-	belongs_to :export_status
-	belongs_to :usage_status
+
 	belongs_to :developer
 	belongs_to :navigation, :dependent => :destroy
 	belongs_to :jtrac, :class_name => "JTrac"
@@ -12,6 +8,8 @@ class Report < ActiveRecord::Base
 	
 	accepts_nested_attributes_for :jtrac, :navigation, :description
 
+	validates_presence_of :name
+	
 	def location
 		return "#{navigation.package} | #{navigation.category} | #{navigation.program}"
 	end
@@ -44,19 +42,22 @@ class Report < ActiveRecord::Base
 	end
 	
 	def current_status
-		return report_status.status
+		return ReportStatus.current_status(report_status_id)
+	end
+	def current_status_label
+		return ReportStatus.current_status_label(report_status_id)
 	end
 	
 	def testability
-		return test_status.status
+		return TestStatus.current_status_label(test_status_id)
 	end
 	
 	def exportability
-		return export_status.status
+		return ExportStatus.current_status_label(export_status_id)
 	end
 	
 	def spec_profiles
-		return specs_status.status
+		return SpecsStatus.current_status_label(spec_status_id)
 	end
 	
 	def jtrac_code
@@ -72,11 +73,7 @@ class Report < ActiveRecord::Base
 	end
 	
 	def user_usage
-		if usage_status.nil?
-			return 'Not Implemented'
-		else
-			return usage_status.status
-		end
+		UsageStatus.current_status_label(usage_status_id)
 	end
 	
 	def objective_html
@@ -88,12 +85,15 @@ class Report < ActiveRecord::Base
 	end
 	
 	def notes_html
+		logger.info notes
+		logger.info BlueCloth.new(notes).to_html()
 		return BlueCloth.new(notes).to_html()
 	end
+	
 	def open_bugs
 		open_bugs = []
 		bugs.each do |bug|
-			if bug.current_status == 'Open'
+			if bug.current_status == BugStatus::OPEN
 				open_bugs << bug
 			end
 		end
@@ -103,7 +103,7 @@ class Report < ActiveRecord::Base
 	def inprogress_bugs
 		inprogress_bugs = []
 		bugs.each do |bug|
-			if bug.current_status == 'In-progress'
+			if bug.current_status == BugStatus::INPROGRESS
 				inprogress_bugs << bug
 			end
 		end
@@ -113,7 +113,7 @@ class Report < ActiveRecord::Base
 	def resolved_bugs
 		resolved_bugs = []
 		bugs.each do |bug|
-			if bug.current_status == 'Resolved'
+			if bug.current_status == BugStatus::RESOLVED
 				resolved_bugs << bug
 			end
 		end

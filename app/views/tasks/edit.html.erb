@@ -1,0 +1,14 @@
+
+<% form_for(@task) do |f| %>
+  <%= f.error_messages %>
+  <%= render :partial => 'edit_form', :locals => {:f => f} %>
+  
+  <div class="form_button_container">
+	<%= f.submit 'Update', {:id => 'submit_button', :class => 'button'} %>
+	<%= f.submit 'Cancel', {:id => 'cancel_button', :class => 'button'}  %>
+	<input type="hidden" id="advanced_toggle" value="0" />
+	[<%=link_to_function "<span id='advanced_toggle_label'>Show Advanced</span>", "toggle_advanced_edit()" %>]
+  </div>
+<% end %>
+
+</div>

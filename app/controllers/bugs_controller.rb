@@ -2,7 +2,8 @@ class BugsController < ApplicationController
   # GET /bugs
   # GET /bugs.xml
   def index
-    @bugs = Bug.all
+   
+  	set_filtered_bugs
 
     respond_to do |format|
       format.html # index.html.erb
@@ -95,9 +96,50 @@ class BugsController < ApplicationController
     end
   end
   
+  def filter_bugs
+  	
+  	@all_bugs = Bug.find(:all)
+  	
+  	if params[:filter_commit].eql?('update')
+  		reselect_filters
+  	end
+  
+	set_filtered_bugs
+	
+    respond_to do |format|
+      format.xml  { render :xml => @reports }
+      format.js {render :action => 'update_filter', :layout => false}
+    end
+  end
+  
+  def reselect_filters
+  	logger.info "INSIDE reselect_filters"
+  	
+  	StatusValue.new(0, 'whymustidothis')
+  	
+  	@all_bugs = Bug.find(:all)
+	
+	@bug_statuses = BugStatus.values.each do |status|
+
+		if (not params[:status].nil?) && (params[:status][status.id.to_s] == '1')
+			session[:selector].selectedBugStatus[status.id] = '1'
+		else
+			session[:selector].selectedBugStatus[status.id] = '0'
+		end
+	end
+	logger.info session[:selector].selectedBugStatus
+  end
+  
+  def set_filtered_bugs
+  	
+  	@all_bugs = Bug.find(:all)
+	@bugs = @all_bugs.select{|bug| 
+		session[:selector].selectedBugStatus[bug.bug_status_id] == '1'
+	}
+  end
+  
   def email_bug
     @bug = Bug.find(params[:id])
-    logger.info "fadsfadsfadsfasdfasdfadsfadsfafasdfadfadsf"
     @bug.email_bug
     respond_to do |format|
       format.js {render :layout => false}
@@ -106,8 +148,7 @@ class BugsController < ApplicationController
   
    def update_bug_status
     @bug = Bug.find(params[:id])
-    bugStatus = BugStatus.find(params[:bug_status_id])
-    @bug.bug_status = bugStatus
+    @bug.bug_status_id = params[:bug_status_id]
     @bug.save
     @report = @bug.report
     respond_to do |format|
@@ -115,7 +156,4 @@ class BugsController < ApplicationController
     end
   end
   
-  def reselect_filters
-  	
-  end 
 end

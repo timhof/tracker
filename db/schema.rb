@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100608235403) do
+ActiveRecord::Schema.define(:version => 20100623170528) do
 
   create_table "bug_statuses", :force => true do |t|
     t.string   "status"
@@ -41,6 +41,9 @@ ActiveRecord::Schema.define(:version => 20100608235403) do
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "status"
+    t.text     "status_description"
+    t.integer  "report_rank"
   end
 
   create_table "export_statuses", :force => true do |t|
@@ -48,6 +51,17 @@ ActiveRecord::Schema.define(:version => 20100608235403) do
     t.integer  "rank"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "issues", :force => true do |t|
+    t.string   "description"
+    t.integer  "originator_id"
+    t.integer  "owner_id"
+    t.integer  "issue_status_id"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "j_tracs", :force => true do |t|
@@ -106,6 +120,26 @@ ActiveRecord::Schema.define(:version => 20100608235403) do
   create_table "specs_statuses", :force => true do |t|
     t.string   "status"
     t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "task_statuses", :force => true do |t|
+    t.string   "status"
+    t.integer  "rank"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tasks", :force => true do |t|
+    t.string   "name"
+    t.text     "description"
+    t.text     "notes"
+    t.string   "jtrac_url"
+    t.string   "jtrac_code"
+    t.string   "jtrac_project"
+    t.integer  "task_status_id"
+    t.integer  "developer_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

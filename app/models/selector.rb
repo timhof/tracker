@@ -5,9 +5,11 @@ class Selector
 					  :maintainerIdNameMap, 
 					  :selectedMaintainer,
 					  :bugStatusIdNameMap,
-					  :selectedBugStatuses,
+					  :selectedBugStatus,
 					  :reportStatusIdNameMap,
-					  :selectedReportStatus
+					  :selectedReportStatus,
+					  :taskStatusIdNameMap,
+					  :selectedTaskStatus
 					  
 					  
 	def initialize
@@ -15,6 +17,7 @@ class Selector
 		initialize_report_filters
 		initialize_report_statuses
 		initialize_bug_statuses
+		initialize_task_statuses
 	end
 	
 	def initialize_columns
@@ -34,7 +37,9 @@ class Selector
 						:inprogress_bugs => '0',
 						:resolved_bugs => '0',
 						:jtrac => '1',
-						:date_updated => '0'}
+						:date_updated => '0', 
+						:notes => '0'
+					}
 	end
 	
 	def initialize_report_filters(select_all=true)
@@ -66,24 +71,39 @@ class Selector
 	
 	
 	def initialize_bug_statuses
-		
-		@selectedBugStatuses = []
+		StatusValue.new(0, 'whymustidothis')
+		@selectedBugStatus = {}
 		tempBugStatusIdNameMap = {}
-  		BugStatus.find(:all, :order => "rank asc").each do |bug_status|
-  			@selectedBugStatuses << bug_status.id
-  			tempBugStatusIdNameMap[bug_status.id] = bug_status.status
+  		BugStatus.values.each do |bug_status|
+  			@selectedBugStatus[bug_status.id] = '1'
+  			tempBugStatusIdNameMap[bug_status.id] = bug_status.label
   		end
+  		@selectedBugStatus[BugStatus::RESOLVED.id] = '0'
   		@bugStatusIdNameMap = tempBugStatusIdNameMap.sort
 	end
 	
+	def initialize_task_statuses
+		StatusValue.new(0, 'whymustidothis')
+		@selectedTaskStatus = {}
+		tempTaskStatusIdNameMap = {}
+  		TaskStatus.values.each do |task_status|
+  			@selectedTaskStatus[task_status.id] = '1'
+  			tempTaskStatusIdNameMap[task_status.id] = task_status.label
+  		end
+  		@selectedTaskStatus[TaskStatus::COMPLETE.id] = '0'
+  		@taskStatusIdNameMap = tempTaskStatusIdNameMap.sort
+	end
+	
 	def initialize_report_statuses
-		
+		StatusValue.new(0, 'whymustidothis')
 		@selectedReportStatus = {}
 		tempReportStatusIdNameMap = {}
-  		ReportStatus.find(:all, :order => "rank asc").each do |report_status|
+		
+  		ReportStatus.values.each do |report_status|
   			@selectedReportStatus[report_status.id] = '1'
-  			tempReportStatusIdNameMap[report_status.id] = report_status.status
+  			tempReportStatusIdNameMap[report_status.id] = report_status.label
   		end
+  		@selectedReportStatus[ReportStatus::CLOSED.id] = '0'
   		@reportStatusIdNameMap = tempReportStatusIdNameMap.sort
 	end
 	

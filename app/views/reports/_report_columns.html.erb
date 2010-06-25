@@ -1,5 +1,5 @@
 
-<%	form_tag (change_report_columns_path, {:class => 'ajaxForm', :id => 'column_form' }) do %>
+<%	form_tag(change_report_columns_path, {:class => 'ajaxForm', :id => 'column_form' }) do %>
 	<div class="yui-b">
 		<div id="column_checkbox_container" class="yui-u">
 <%=		render :partial => 'checkbox_group', :locals => {:idNameMap => ReportsHelper::ColumnIdNameMap, :selectedKeys =>session[:selector].selectedColumns, :checkbox_container_div => 'column_checkbox_container', :parameterName => 'columns', :title => 'Column Control'}%>

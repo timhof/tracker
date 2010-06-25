@@ -10,6 +10,16 @@ class DevelopersController < ApplicationController
     end
   end
 
+  # GET /developers/1
+  # GET /developers/1.xml
+  def show
+    @developer = Developer.find(params[:id])
+    respond_to do |format|
+      format.html # show.html.erb
+      format.xml  { render :xml => @developer }
+    end
+  end
+  
   # GET /developers/new
   # GET /developers/new.xml
   def new

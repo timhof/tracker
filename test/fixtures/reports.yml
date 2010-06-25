@@ -1,7 +1,12 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-# one:
-#   column: value
-#
-# two:
-#   column: value
+amt_allocation:
+  name: AMT Allocation
+  description: amt_allocation_desc
+  navigation: amt_allocation_nav
+  jtrac: amt_allocation_trac
+  report_status: na
+  export_status: na
+  specs_status: na
+  test_status: na
+  developer: timhof
+  notes: AMT Allocation Notes
+  worker: AMTAllocationWorker

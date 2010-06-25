@@ -1,0 +1,80 @@
+<% StatusValue.new(0, 'whymustidothis') %>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :name %></div>
+    </div>
+  </div>
+ 
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Developer</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:task, :developer_id, Developer.find(:all, :order => "first, last"), :id, :full_name) %>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:task, :task_status_id, TaskStatus.values, :id, :label) %> 
+    	</div>
+    </div>
+  </div>
+  
+   <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Description</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_area :description, {:rows => '10', :cols => '80', :class => 'editor'} %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Notes</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_area :notes, {:rows => '2', :cols => '80', :class => 'advanced_editor'} %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">JTrac Code</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :jtrac_code %> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">JTrac Project</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :jtrac_project%>
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">JTrac URL</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :jtrac_url, {:size => '100'}%> 
+    	</div>
+    </div>
+  </div>
+ 
+		
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('form:not(.filter) :input:visible:first').focus();
+		$(".form_element_div :first_child").clickOnEnter('#submit_button');
+  	} );
+</script>
+

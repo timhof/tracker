@@ -1,0 +1,667 @@
+=> Booting Mongrel
+=> Rails 2.3.2 application starting on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+Open
+In-progress
+Resolved
+{}
+
+
+Processing ReportsController#index (for 127.0.0.1 at 2010-06-16 18:52:36) [GET]
+  [4;36;1mReport Load (17.0ms)[0m   [0;1mSELECT * FROM "reports" [0m
+  [4;35;1mDeveloper Load (1.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 5) [0m
+  [4;35;1mDeveloper Load (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 6) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 8) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 10) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 11) [0m
+  [4;35;1mDeveloper Load (1.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 12) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 14) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 15) [0m
+  [4;35;1mDeveloper Load (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 16) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 17) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 18) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 19) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 20) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 22) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 24) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 26) [0m
+  [4;35;1mDeveloper Load (1.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 27) [0m
+  [4;35;1mDeveloper Load (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 28) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 29) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 30) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 31) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 32) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 33) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 34) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 36) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 37) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 38) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 39) [0m
+  [4;35;1mDeveloper Load (1.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 40) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 42) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 43) [0m
+  [4;35;1mDeveloper Load (1.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 45) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 46) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 47) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 48) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 49) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 50) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 53) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 55) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 59) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 61) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 62) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 63) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 66) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 67) [0m
+  [4;35;1mDeveloper Load (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 68) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 69) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 70) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+  [4;36;1mNavigation Load (5.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 71) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 72) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 73) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 74) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 75) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 77) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 78) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 79) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+  [4;36;1mNavigation Load (1.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 80) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+  [4;36;1mNavigation Load (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 81) [0m
+  [4;35;1mReportStatus Load (0.0ms)[0m   [0mSELECT * FROM "report_statuses" ORDER BY rank asc[0m
+  [4;36;1mBugStatus Load (1.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" ORDER BY rank asc[0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "reports" [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 5) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 6) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 7) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 8) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 9) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 10) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 11) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 12) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 14) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 15) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 16) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 17) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 18) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 19) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 20) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 21) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 22) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 23) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 24) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 25) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 26) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 27) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 28) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 29) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 30) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 31) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 32) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 33) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 34) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 35) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 36) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 37) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 38) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 39) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 40) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 41) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 42) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 43) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 44) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 45) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 46) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 47) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 48) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 49) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 50) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 53) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 54) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 56) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 57) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 58) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 60) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 61) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 62) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 63) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 66) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 67) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 68) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 69) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 70) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 71) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 72) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 73) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 74) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 75) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 76) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 77) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 78) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 79) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "navigations" WHERE ("navigations"."id" = 80) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "navigations" WHERE ("navigations"."id" = 81) [0m
+Rendering template within layouts/main
+Rendering reports/index
+  [4;36;1mBug Load (1.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 8) [0m
+  [4;35;1mBugStatus Load (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (5.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (3.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 4) [0m
+  [4;36;1mBug Load (1.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 9) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 5) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 10) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (1.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 6) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 11) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 7) [0m
+  [4;35;1mBug Load (1.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 12) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 8) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 13) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 9) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 14) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 10) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 15) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 11) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 16) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 12) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 17) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 13) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 18) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 14) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 19) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 15) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 20) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 16) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 21) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (1.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 17) [0m
+  [4;36;1mBug Load (1.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 22) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 18) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 23) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 19) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 24) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 20) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 25) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 21) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 26) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 22) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 27) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 23) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 28) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 24) [0m
+  [4;35;1mBug Load (1.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 29) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 8) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (1.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 25) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 30) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 26) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 31) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 27) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 32) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 28) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 33) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 29) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 34) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 30) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 35) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 31) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 36) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 32) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 37) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 7) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 33) [0m
+  [4;36;1mBug Load (1.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 38) [0m
+  [4;35;1mBugStatus Load (1.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 34) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 39) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 35) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 40) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 36) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 41) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 37) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 42) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 38) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 43) [0m
+  [4;35;1mBugStatus Load (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 2) [0m
+Rendered reports/_options (1.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 39) [0m
+  [4;36;1mBug Load (3.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 44) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 40) [0m
+  [4;36;1mBug Load (2.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 45) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 3) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 41) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 46) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 42) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 47) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 43) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 48) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 44) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 49) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 45) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 50) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 46) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 51) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 47) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 52) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 48) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 53) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 2) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 49) [0m
+  [4;35;1mBug Load (1.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 55) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 51) [0m
+  [4;35;1mBug Load (1.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 56) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 52) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 57) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 53) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 58) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 54) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 59) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 55) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 60) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 56) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 61) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 57) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 62) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 58) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 63) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 59) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 64) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 60) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 65) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 61) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 66) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 4) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 62) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 69) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 6) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 65) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 70) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 66) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 71) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (1.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 67) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 72) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 68) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 73) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 15) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 69) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 74) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 70) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 75) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 5) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 71) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 76) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 72) [0m
+  [4;35;1mBug Load (1.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 77) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 73) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 78) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 74) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 79) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 75) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 80) [0m
+Rendered reports/_options (2.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (2.0ms)
+  [4;36;1mJTrac Load (1.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 76) [0m
+  [4;35;1mBug Load (0.0ms)[0m   [0mSELECT * FROM "bugs" WHERE ("bugs".report_id = 81) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 77) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 82) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (2.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (2.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 78) [0m
+  [4;36;1mBug Load (0.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 83) [0m
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "bug_statuses" WHERE ("bug_statuses"."id" = 1) [0m
+Rendered reports/_options (3.0ms)
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "developers" WHERE ("developers"."id" = 9) [0m
+Rendered developers/_options (1.0ms)
+  [4;35;1mJTrac Load (0.0ms)[0m   [0mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 79) [0m
+  [4;36;1mBug Load (1.0ms)[0m   [0;1mSELECT * FROM "bugs" WHERE ("bugs".report_id = 84) [0m
+Rendered reports/_options (3.0ms)
+  [4;35;1mCACHE (0.0ms)[0m   [0mSELECT * FROM "developers" WHERE ("developers"."id" = 10) [0m
+Rendered developers/_options (1.0ms)
+  [4;36;1mJTrac Load (0.0ms)[0m   [0;1mSELECT * FROM "j_tracs" WHERE ("j_tracs"."id" = 80) [0m
+Rendered reports/_report_table (699.0ms)
+Rendered reports/_checkbox_group (3.0ms)
+Rendered reports/_checkbox_group (1.0ms)
+Rendered reports/_checkbox_group (1.0ms)
+Rendered reports/_report_filters (13.0ms)
+Rendered reports/_checkbox_group (2.0ms)
+Rendered reports/_report_columns (5.0ms)
+Completed in 1531ms (View: 826, DB: 82) | 200 OK [http://127.0.0.1/]
+Exiting

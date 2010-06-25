@@ -1,0 +1,36 @@
+
+<div class="yui-b" id="task_table_div">
+	<%= render :partial => 'task_table' %>
+</div>
+
+<div id="filter_dialog" title="Filters" style="display:none;">
+	<%= render :partial => 'tasks/task_filters' %>
+</div>
+
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('#task_table').dataTable({"iDisplayLength": 25});
+		
+		
+		$("#filter_dialog").dialog({
+	      	bgiframe: true, 
+	      	autoOpen: false, 
+	      	modal: true,
+	      	width: '850px',
+			buttons: {
+				Cancel: function() {
+					$(this).dialog('close');
+					$('#filter_commit').val('cancel');
+					$('#filter_form').submit();
+					
+				},
+				'OK': function() {
+					$(this).dialog('close');
+					$('#filter_commit').val('update');
+					$('#filter_form').submit();
+				}
+			}
+	    });
+	});
+</script>
+

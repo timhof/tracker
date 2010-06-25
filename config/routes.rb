@@ -1,10 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :usage_statuses
+  map.resources :issues
 
-  map.resources :bug_statuses
-
-  #map.resources :bugs
-
+  map.resources :tasks
+  
   map.resources :developers
 
   map.resources :descriptions
@@ -13,29 +11,30 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :j_tracs
 
-  map.resources :export_statuses
-
-  map.resources :specs_statuses
-
-  map.resources :test_statuses
-
-  map.resources :report_statuses
-
   map.resources :reports do |report|
   	report.resources :bugs
   end
   
   map.root :controller => "reports", :action => "index"
 
-  map.filter_reports '/filter', :controller => "reports", :action => "filter_reports"
+  map.filter_reports '/filter_reports', :controller => "reports", :action => "filter_reports"
+  map.filter_bugs '/filter_bugs', :controller => "bugs", :action => "filter_bugs"
+  map.filter_tasks '/filter_tasks', :controller => "tasks", :action => "filter_tasks"
   
   map.change_report_columns '/change_report_columns', :controller => "reports", :action => "change_columns"
+  
+  map.reports_index_print 'reports_index_print', :controller => "reports", :action => "index_print"
+  map.summary_report 'summary_report', :controller => "reports", :action => "summary_report"
   
   map.all_bugs '/all_bugs', :controller => 'bugs', :action => 'index'
   
   map.email_bug '/email_bug/:id', :controller => 'bugs', :action => 'email_bug'
   map.update_bug_status '/update_bug_status/:id/:bug_status_id', :controller => 'bugs', :action => 'update_bug_status'
  
+  map.update_report_status '/update_report_status/:id/:report_status_id', :controller => 'reports', :action => 'update_report_status'
+  
+  map.update_task_status '/update_task_status/:id/:task_status_id', :controller => 'tasks', :action => 'update_task_status'
+  
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:

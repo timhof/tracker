@@ -1,7 +1,20 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+planning:
+  status: Planning
+  rank: 0
+inprogress:
+  status: In-Progress
+  rank: 1
+testing_l5m:
+  status: Tesging L5M
+  rank: 2
+testing_qht:
+  status: Testing QHT
+  rank: 3
+testing_pro:
+  status: Testing PRO
+  rank: 4
+stable:
+  status: Stable
+  rank: 5

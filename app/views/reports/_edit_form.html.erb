@@ -1,5 +1,6 @@
 
   
+    		<% StatusValue.new(0, 'whymustidothis') %>
   <div class="yui-b selection_div">
     <div class="yui-gf">
         <div class="yui-u first">Name</div>
@@ -51,11 +52,19 @@
     </div>
   </div>
   
-  <div class="yui-b selection_div advanced_edit">
+  <div class="yui-b selection_div">
     <div class="yui-gf">
         <div class="yui-u first">Status</div>
     	<div class="yui-u form_element_div">
-    		<%= collection_select(:report, :report_status_id, ReportStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    		<%= collection_select(:report, :report_status_id, ReportStatus.values, :id, :label) %> 		</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Notes</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_area :notes, {:rows => '12', :cols => '80', :class => 'editor'} %> 
     	</div>
     </div>
   </div>
@@ -64,7 +73,7 @@
     <div class="yui-gf">
         <div class="yui-u first">Test Status</div>
     	<div class="yui-u form_element_div">
-    		<%= collection_select(:report, :test_status_id, TestStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    		<%= collection_select(:report, :test_status_id, TestStatus.values, :id, :label) %> 
     	</div>
     </div>
   </div>
@@ -73,7 +82,7 @@
     <div class="yui-gf">
         <div class="yui-u first">Export Status</div>
     	<div class="yui-u form_element_div">
-    		<%= collection_select(:report, :export_status_id, ExportStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    		<%= collection_select(:report, :export_status_id, ExportStatus.values, :id, :label) %> 
     	</div>
     </div>
   </div>
@@ -82,7 +91,7 @@
     <div class="yui-gf">
         <div class="yui-u first">Specs Status</div>
     	<div class="yui-u form_element_div">
-    		<%= collection_select(:report, :spec_status_id, SpecsStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    		<%= collection_select(:report, :spec_status_id, SpecsStatus.values, :id, :label) %> 
     	</div>
     </div>
   </div>
@@ -91,7 +100,7 @@
     <div class="yui-gf">
         <div class="yui-u first">Usage Status</div>
     	<div class="yui-u form_element_div">
-    		<%= collection_select(:report, :usage_status_id, UsageStatus.find(:all, :order => "rank asc"), :id, :status) %> 
+    		<%= collection_select(:report, :usage_status_id, UsageStatus.values, :id, :label) %> 
     	</div>
     </div>
   </div>
@@ -102,7 +111,7 @@
     <div class="yui-gf">
         <div class="yui-u first">Objective</div>
     	<div class="yui-u form_element_div">
-    		<%= description_form.text_area :objective, {:rows => '2', :cols	 => '80', :class => 'editor'}%> 
+    		<%= description_form.text_area :objective, {:rows => '2', :cols	 => '80', :class => 'advanced_editor'}%> 
     	</div>
     </div>
   </div>
@@ -110,20 +119,11 @@
     <div class="yui-gf">
         <div class="yui-u first">Usage</div>
     	<div class="yui-u form_element_div">
-    		<%= description_form.text_area :usage, {:rows => '2', :cols => '80', :class => 'editor'} %> 
+    		<%= description_form.text_area :usage, {:rows => '2', :cols => '80', :class => 'advanced_editor'} %> 
     	</div>
     </div>
   </div>
 <%   end %>
-
-  <div class="yui-b selection_div advanced_edit">
-    <div class="yui-gf">
-        <div class="yui-u first">Notes</div>
-    	<div class="yui-u form_element_div">
-    		<%= f.text_area :notes, {:rows => '2', :cols => '80', :class => 'editor'} %> 
-    	</div>
-    </div>
-  </div>
   
   <%   f.fields_for :jtrac do |jtrac_form| %>
   

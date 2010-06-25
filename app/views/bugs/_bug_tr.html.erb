@@ -1,5 +1,6 @@
 
-<tr id="bug_tr_<%= bug.id %>">
+    		<% StatusValue.new(0, 'whymustidothis') %>
+<tr id="bug_tr_<%= bug.id %>" class="status_<%= bug.current_status %>">
 	<td class="nowrap_cell">
 	 	<%= render :partial => 'options', :locals => {:report => bug.report, :bug => bug} %>
 	</td>
@@ -8,5 +9,6 @@
 	 	<%= bug.name %>
 	</td>
 	<td class="nowrap_cell"><%= bug.report.maintainer %></td>
-	<td><%= bug.current_status %></td>	 			
+	<td><%= bug.current_status_label %></td>	 
+	<td><%= bug.updated_at.strftime("%m/%d/%Y") %></td>			
 </tr>

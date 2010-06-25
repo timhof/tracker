@@ -1,8 +1,9 @@
 
-<%	form_tag (filter_bugs_path, {:class => 'ajaxForm', :id => 'filter_form' }) do %>
+<%	form_tag(filter_bugs_path, {:class => 'ajaxForm', :id => 'filter_form' }) do %>
 	<div class="yui-b"><div class="yui-g">
 		<div id="status_checkbox_container" class="yui-u first">
-<%=		render :partial => 'checkbox_group', :locals => {:idNameMap => session[:selector].bugStatusIdNameMap, :selectedKeys =>session[:selector].selectedBugStatuses, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'bug_status', :title => 'Status Filter'}%>
+<%=		render :partial => 'reports/checkbox_group', :locals => {:idNameMap => session[:selector].bugStatusIdNameMap, :selectedKeys =>session[:selector].selectedBugStatus, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'status', :title => 'Status
+lter'}%>
 		</div>
 	</div></div>
 	<input type="hidden" id="filter_commit" name="filter_commit" value="update" />

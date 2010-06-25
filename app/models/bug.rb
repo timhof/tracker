@@ -1,15 +1,20 @@
 class Bug < ActiveRecord::Base
 	
-	belongs_to :bug_status
 	belongs_to :report
 	
+	validates_presence_of :report_id
+	
+	def current_status_label
+		BugStatus.current_status_label(bug_status_id)
+	end
+	
 	def current_status
-		return bug_status.status
+		BugStatus.current_status(bug_status_id)
 	end
 	
 	def email_bug
 		logger.info "     TO: #{report.developer.email}"
-		logger.info "SUBJECT: Bug: #{name}"
+		logger.info "SUBJECT: Bug: #{report.location} -- #{name}"
 		logger.info "   BODY: #{description}"
 	end
 	
@@ -29,14 +34,14 @@ class Bug < ActiveRecord::Base
 	end
 	
 	def is_open
-		bug_status.id == 1
+		bug_status_id == BugStatus::OPEN.id
 	end
 	
 	def is_inprogress
-		bug_status.id == 2
+		bug_status_id == BugStatus::INPROGRESS.id
 	end
 	
 	def is_resolved
-		bug_status.id == 3
+		bug_status_id == BugStatus::RESOLVED.id
 	end
 end

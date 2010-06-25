@@ -22,8 +22,14 @@
             <string>..\stateli\public\javascripts\application.js</string>
             <key>APPLI</key>
             <string>..\stateli\app\views\layouts\application.html.erb</string>
+            <key>BUG.RB</key>
+            <string>app\models\bug.rb</string>
+            <key>BUGCON</key>
+            <string>app\controllers\bugs_controller.rb</string>
             <key>BUGSCO</key>
             <string>app\controllers\bugs_controller.rb</string>
+            <key>BUGSTAT</key>
+            <string>app\models\bug_status.rb</string>
             <key>BUILD</key>
             <string>..\stateli\app\views\stateli\build_contract.js.rjs</string>
             <key>CONTRACT.RB</key>
@@ -38,10 +44,16 @@
             <string>..\stateli\app\views\contracts\contract_pending.html.erb</string>
             <key>CONTRACT_TEST</key>
             <string>..\stateli\test\unit\contract_test.rb</string>
+            <key>ENVIR</key>
+            <string>config\environment.rb</string>
             <key>JOurnalpe</key>
             <string>..\stateli\app\flex\JournalPending.mxml</string>
             <key>LISTING</key>
             <string>..\stateli\app\views\stateli\account_listing.html.erb</string>
+            <key>OOS</key>
+            <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
+            <key>REPORTSCON</key>
+            <string>app\controllers\reports_controller.rb</string>
             <key>ROUT</key>
             <string>config\routes.rb</string>
             <key>ROUTE</key>
@@ -52,12 +64,20 @@
             <string>public\stylesheets\scaffold.css</string>
             <key>SCAFF</key>
             <string>public\stylesheets\scaffold.css</string>
+            <key>SCHEMA.RB</key>
+            <string>db\schema.rb</string>
             <key>STAT</key>
             <string>..\stateli\app\controllers\stateli_controller.rb</string>
             <key>STATE</key>
             <string>..\stateli\app\helpers\stateli_helper.rb</string>
             <key>STATELIHELP</key>
             <string>..\stateli\app\helpers\stateli_helper.rb</string>
+            <key>SUMM</key>
+            <string>app\views\reports\summary_report.html.erb</string>
+            <key>TASK.R</key>
+            <string>app\models\task.rb</string>
+            <key>TASKSTAT</key>
+            <string>app\models\task_status.rb</string>
             <key>TR</key>
             <string>..\stateli\app\models\transaction.rb</string>
             <key>TRANSAC</key>
@@ -109,6 +129,8 @@
             <key>_do</key>
             <string>..\stateli\app\views\stateli\_transaction_do.html.erb</string>
             <key>_ed</key>
+            <string>app\views\tasks\_edit_form.html.erb</string>
+            <key>_edit</key>
             <string>app\views\reports\_edit_form.html.erb</string>
             <key>_listing</key>
             <string>..\stateli\app\views\contracts\contract_listing.html.erb</string>
@@ -314,12 +336,20 @@
             <string>..\stateli\public\stylesheets\bank.css</string>
             <key>bank.css</key>
             <string>..\stateli\public\stylesheets\bank.css</string>
+            <key>bug</key>
+            <string>app\models\bug.rb</string>
             <key>bug.r</key>
             <string>app\models\bug.rb</string>
             <key>bug.rb</key>
             <string>app\models\bug.rb</string>
+            <key>bugStatus</key>
+            <string>app\models\bug_status.rb</string>
+            <key>bug_fil</key>
+            <string>app\views\bugs\_bug_filters.html.erb</string>
             <key>bug_statusescon</key>
             <string>app\controllers\bug_statuses_controller.rb</string>
+            <key>bug_tr</key>
+            <string>app\views\bugs\_bug_tr.html.erb</string>
             <key>bugc</key>
             <string>app\controllers\bugs_controller.rb</string>
             <key>bugs</key>
@@ -330,6 +360,12 @@
             <string>app\controllers\bugs_controller.rb</string>
             <key>bugscont</key>
             <string>app\controllers\bugs_controller.rb</string>
+            <key>bugscontro</key>
+            <string>app\controllers\bugs_controller.rb</string>
+            <key>bugscontrol</key>
+            <string>app\controllers\bugs_controller.rb</string>
+            <key>bugsta</key>
+            <string>app\models\bug_status.rb</string>
             <key>bugstatusescon</key>
             <string>app\controllers\bug_statuses_controller.rb</string>
             <key>bui</key>
@@ -460,18 +496,28 @@
             <string>..\stateli\app\views\stateli\_account_history_details.html.erb</string>
             <key>deve</key>
             <string>app\controllers\developers_controller.rb</string>
+            <key>develope</key>
+            <string>app\models\developer.rb</string>
+            <key>developer</key>
+            <string>app\models\developer.rb</string>
+            <key>developer.</key>
+            <string>app\models\developer.rb</string>
+            <key>developer.r</key>
+            <string>app\models\developer.rb</string>
             <key>developerc</key>
             <string>app\controllers\developers_controller.rb</string>
             <key>developerscon</key>
             <string>app\controllers\developers_controller.rb</string>
+            <key>developerstat</key>
+            <string>app\models\developer_status.rb</string>
             <key>do</key>
             <string>..\stateli\app\views\stateli\_transaction_do.html.erb</string>
             <key>e</key>
             <string>..\stateli\app\views\stateli\error500.html.erb</string>
             <key>edit</key>
-            <string>..\stateli\app\views\stateli\_transaction_edit.html.erb</string>
+            <string>app\views\reports\_edit_form.html.erb</string>
             <key>edit_form</key>
-            <string>app\views\bugs\_edit_form.html.erb</string>
+            <string>app\views\developers\_edit_form.html.erb</string>
             <key>en</key>
             <string>..\stateli\config\environment.rb</string>
             <key>env</key>
@@ -516,8 +562,18 @@
             <string>app\views\reports\index.html.erb</string>
             <key>index.</key>
             <string>..\stateli\app\views\transactions\index.html.erb</string>
+            <key>index.html.erb</key>
+            <string>app\views\tasks\index.html.erb</string>
             <key>indx</key>
             <string>..\stateli\app\views\stateli\index.html.erb</string>
+            <key>issue</key>
+            <string>app\models\issue.rb</string>
+            <key>issue.rb</key>
+            <string>app\models\issue.rb</string>
+            <key>issuest</key>
+            <string>app\models\issue_status.rb</string>
+            <key>issuestat</key>
+            <string>app\models\issue_status.rb</string>
             <key>jour</key>
             <string>..\stateli\app\flex\lib\JournalAccount.as</string>
             <key>journ</key>
@@ -540,7 +596,11 @@
             <string>..\stateli\app\views\stateli\_account_listing_details.html.erb</string>
             <key>lost</key>
             <string>..\stateli\lib\lost_handler.rb</string>
+            <key>ma</key>
+            <string>app\views\layouts\main.html.erb</string>
             <key>main</key>
+            <string>app\views\layouts\main.html.erb</string>
+            <key>main.</key>
             <string>app\views\layouts\main.html.erb</string>
             <key>mxm</key>
             <string>..\stateli\app\flex\accountJournal.mxml</string>
@@ -563,7 +623,7 @@
             <key>navigatio</key>
             <string>..\timothyimhof\app\views\layouts\navigation.html.erb</string>
             <key>navigation</key>
-            <string>..\oriented_objects\app\controllers\navigations_controller.rb</string>
+            <string>app\models\navigation.rb</string>
             <key>new</key>
             <string>..\stateli\app\views\sessions\new.html.erb</string>
             <key>new.h</key>
@@ -583,7 +643,7 @@
             <key>option</key>
             <string>app\views\bugs\_options.html.erb</string>
             <key>options</key>
-            <string>app\views\developers\_options.html.erb</string>
+            <string>app\views\bugs\_options.html.erb</string>
             <key>pend</key>
             <string>..\stateli\app\views\stateli\_account_pending_details.html.erb</string>
             <key>pendin</key>
@@ -646,24 +706,46 @@
             <string>app\models\report.rb</string>
             <key>report.rb</key>
             <string>app\models\report.rb</string>
+            <key>report.y</key>
+            <string>test\fixtures\reports.yml</string>
+            <key>report_t</key>
+            <string>app\views\reports\_report_table.html.erb</string>
+            <key>report_ta</key>
+            <string>app\views\reports\_report_table.html.erb</string>
             <key>report_tab</key>
+            <string>app\views\reports\_report_table.html.erb</string>
+            <key>report_tabl</key>
+            <string>app\views\reports\_report_table.html.erb</string>
+            <key>report_table</key>
             <string>app\views\reports\_report_table.html.erb</string>
             <key>reportcon</key>
             <string>app\controllers\reports_controller.rb</string>
             <key>reports</key>
             <string>app\controllers\reports_controller.rb</string>
+            <key>reports.rb</key>
+            <string>test\unit\report_test.rb</string>
+            <key>reports.y</key>
+            <string>test\fixtures\reports.yml</string>
             <key>reportscon</key>
             <string>app\controllers\reports_controller.rb</string>
             <key>reportsconr</key>
             <string>app\controllers\reports_controller.rb</string>
             <key>reportscont</key>
             <string>app\controllers\reports_controller.rb</string>
+            <key>reportshe</key>
+            <string>app\helpers\reports_helper.rb</string>
+            <key>reportshel</key>
+            <string>app\helpers\reports_helper.rb</string>
             <key>reportso</key>
             <string>app\controllers\reports_controller.rb</string>
             <key>reportson</key>
             <string>app\controllers\reports_controller.rb</string>
+            <key>reportsta</key>
+            <string>app\models\report_status.rb</string>
             <key>reportstatusescon</key>
             <string>app\controllers\report_statuses_controller.rb</string>
+            <key>reporttab</key>
+            <string>app\views\reports\_report_table.html.erb</string>
             <key>resu</key>
             <string>..\timothyimhof\app\views\navigation\resume.html.erb</string>
             <key>resume</key>
@@ -679,11 +761,11 @@
             <key>routes</key>
             <string>config\routes.rb</string>
             <key>routes.</key>
-            <string>..\stateli\config\routes.rb</string>
+            <string>config\routes.rb</string>
             <key>routes.r</key>
             <string>..\stateli\config\routes.rb</string>
             <key>routes.rb</key>
-            <string>..\stateli\config\routes.rb</string>
+            <string>config\routes.rb</string>
             <key>routess</key>
             <string>..\stateli\app\views\stateli\transaction_update.js.rjs</string>
             <key>s</key>
@@ -696,18 +778,30 @@
             <string>public\stylesheets\scaffold.css</string>
             <key>scaff</key>
             <string>public\stylesheets\scaffold.css</string>
+            <key>scaffo</key>
+            <string>public\stylesheets\scaffold.css</string>
             <key>scaffol</key>
             <string>public\stylesheets\scaffold.css</string>
             <key>scaffold</key>
             <string>public\stylesheets\scaffold.css</string>
+            <key>scaffold.</key>
+            <string>public\stylesheets\scaffold.css</string>
             <key>scaffold.css</key>
             <string>public\stylesheets\scaffold.css</string>
+            <key>sch</key>
+            <string>db\schema.rb</string>
             <key>sche</key>
             <string>..\stateli\db\schema.rb</string>
             <key>schem</key>
             <string>db\schema.rb</string>
             <key>schema</key>
             <string>db\schema.rb</string>
+            <key>schema.</key>
+            <string>db\schema.rb</string>
+            <key>select</key>
+            <string>app\models\selector.rb</string>
+            <key>selecto</key>
+            <string>app\models\selector.rb</string>
             <key>selector</key>
             <string>app\models\selector.rb</string>
             <key>sess</key>
@@ -719,6 +813,8 @@
             <key>sessionstore</key>
             <string>config\initializers\session_store.rb</string>
             <key>show</key>
+            <string>app\views\reports\show.html.erb</string>
+            <key>show.</key>
             <string>app\views\reports\show.html.erb</string>
             <key>sig</key>
             <string>..\stateli\vendor\plugins\restful_authentication\generators\authenticated\templates\signup.html.erb</string>
@@ -762,6 +858,34 @@
             <string>..\tutor\public\stylesheets\suess.css</string>
             <key>sue</key>
             <string>..\tutor\public\stylesheets\suess.css</string>
+            <key>sum</key>
+            <string>app\views\reports\summary_report.html.erb</string>
+            <key>summ</key>
+            <string>app\views\reports\summary_report.html.erb</string>
+            <key>summar</key>
+            <string>app\views\reports\summary_report.html.erb</string>
+            <key>summary</key>
+            <string>app\views\reports\summary_report.html.erb</string>
+            <key>task</key>
+            <string>app\models\task_status.rb</string>
+            <key>task.</key>
+            <string>app\models\task.rb</string>
+            <key>task.r</key>
+            <string>app\models\task.rb</string>
+            <key>task.rb</key>
+            <string>app\models\task.rb</string>
+            <key>taskcon</key>
+            <string>app\controllers\tasks_controller.rb</string>
+            <key>taskcontr</key>
+            <string>app\controllers\tasks_controller.rb</string>
+            <key>tasks</key>
+            <string>app\models\task_status.rb</string>
+            <key>taskscon</key>
+            <string>app\controllers\tasks_controller.rb</string>
+            <key>taskst</key>
+            <string>app\models\task_status.rb</string>
+            <key>taskstat</key>
+            <string>app\models\task_status.rb</string>
             <key>test_helper</key>
             <string>..\stateli\test\test_helper.rb</string>
             <key>testscon</key>
@@ -780,6 +904,14 @@
             <string>..\stateli\app\models\transaction.rb</string>
             <key>tra</key>
             <string>..\stateli\app\models\transaction.rb</string>
+            <key>tracker</key>
+            <string>app\models\tracker_mailer.rb</string>
+            <key>tracker_m</key>
+            <string>app\models\tracker_mailer.rb</string>
+            <key>trackeren</key>
+            <string>app\models\tracker_enumeration.rb</string>
+            <key>trackerst</key>
+            <string>app\models\tracker_status.rb</string>
             <key>tran</key>
             <string>..\stateli\app\models\transaction.rb</string>
             <key>trans</key>
@@ -888,6 +1020,8 @@
             <string>..\stateli\app\controllers\transactions_controller.rb</string>
             <key>transactiontest</key>
             <string>..\stateli\test\unit\transaction_test.rb</string>
+            <key>update_bug</key>
+            <string>app\views\bugs\update_bug_status.js.erb</string>
             <key>update_journal</key>
             <string>..\stateli\app\views\accounts\update_journal.js.rjs</string>
             <key>update_pend</key>

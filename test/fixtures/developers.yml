@@ -1,7 +1,16 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
-# one:
-#   column: value
-#
-# two:
-#   column: value
+timhof:
+  first: Timothy
+  last: Imhof
+  email: Timothy.Imhof@l5m.com
+  
+dcheng:
+  first: Dihan
+  last: Cheng
+  email: Dihan.Cheng@l5m.com
+  
+hwang:
+  first: Hao
+  last: Wang
+  email: Hao.Wang@l5m.com

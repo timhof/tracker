@@ -29,7 +29,7 @@ var toggle_advanced_edit = function(){
 		$('#advanced_toggle').val('1');
 		$('#advanced_toggle_label').html('Hide Avanced');
 		
-		 $('.editor').markedit();
+		 $('.advanced_editor').markedit();
 	}
 	else{
 		$('.advanced_edit').hide();

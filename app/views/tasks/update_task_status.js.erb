@@ -1,0 +1,12 @@
+<% StatusValue.new(0, 'whymustidothis') %>
+		
+$('#open_tasks_div').html("<%= escape_javascript(render :partial => 'reports/show_task', :collection => @developer.open_tasks, :as => :task) %><%= @developer.open_tasks.empty? ? "&nbsp;" : ""%>");
+
+$('#inprogress_tasks_div').html("<%= escape_javascript(render :partial => 'reports/show_task', :collection => @developer.inprogress_tasks, :as => :task) %><%= @developer.inprogress_tasks.empty? ? "&nbsp;" : ""%>");
+
+$('#completed_tasks_div').html("<%= escape_javascript(render :partial => 'reports/show_task', :collection => @developer.completed_tasks, :as => :task) %><%= @developer.completed_tasks.empty? ? "&nbsp;" : ""%>");
+
+$('#task_tr_<%= @task.id %>').html("<%= escape_javascript(render :partial => 'task_tr', :locals => {:task => @task})%>");
+$('#task_table').dataTable();
+
+ajaxLinks();

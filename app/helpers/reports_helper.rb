@@ -1,6 +1,6 @@
 module ReportsHelper
 	
-	ColumnIdNameMap = {:options => 'Options',
+	ColumnIdNameMap = {:options => '&nbsp;',
 						:name => 'Name',
 						:package => 'Package',
 						:category => 'Category',
@@ -17,6 +17,7 @@ module ReportsHelper
 						:resolved_bugs => 'Resolved Bugs',
 						:worker => "Worker",
 						:jtrac => 'JTrac',
-						:date_updated => 'Date Updated'
+						:date_updated => 'Date Updated',
+						:notes => 'Notes'
 					}
 end

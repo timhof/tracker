@@ -1,3 +1,5 @@
+<% StatusValue.new(0, 'whymustidothis') %>
+
 $('#open_bugs_div').html("<%= escape_javascript(render :partial => 'reports/show_bug', :collection => @report.open_bugs, :as => :bug) %><%= @report.open_bugs.empty? ? "&nbsp;" : ""%>");
 
 $('#inprogress_bugs_div').html("<%= escape_javascript(render :partial => 'reports/show_bug', :collection => @report.inprogress_bugs, :as => :bug) %><%= @report.inprogress_bugs.empty? ? "&nbsp;" : ""%>");
