@@ -15,6 +15,8 @@ module ReportsHelper
 						:open_bugs => 'Open Bugs',
 						:inprogress_bugs => 'In-Progress Bugs',
 						:resolved_bugs => 'Resolved Bugs',
+						:test_plans => 'Test Plans',
+						:manual => 'Manual',
 						:worker => "Worker",
 						:jtrac => 'JTrac',
 						:date_updated => 'Date Updated',

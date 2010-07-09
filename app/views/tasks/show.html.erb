@@ -24,4 +24,14 @@
     	<div class="yui-u first show_label">JTrac</div>
 		<div class="yui-u"><%= link_to @task.jtrac_url,  @task.jtrac_url %></div>
 	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Report</div>
+		<div class="yui-u">
+		<% if @task.report.nil? %>
+			&nbsp;
+		<% else %>
+			<%= @task.report.location %>  <%= render :partial => 'reports/options', :locals => {:report => @task.report} %>
+		<% end %>
+		</div>
+	</div></div>
 </div>

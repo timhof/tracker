@@ -1,13 +1,14 @@
-<%= link_to image_tag("/images/icons/magnifier.png"), task %>
-<%= link_to image_tag("/images/icons/edit-signiture.png"), edit_task_path(task) %>
-<%= link_to image_tag("/images/icons/cross-script.png"), task, :confirm => 'Are you sure?', :method => :delete %>
+<%= link_to image_tag("/images/icons/magnifier.png"), task, {:title => 'Show Task Details'} %>
+<%= link_to image_tag("/images/icons/printer.png"), print_task_path(task), {:title => 'Print Task'} %>
+<%= link_to image_tag("/images/icons/edit-signiture.png"), edit_task_path(task), {:title => 'Edit Task Details'} %>
+<%= link_to image_tag("/images/icons/cross-script.png"), task, {:confirm => 'Are you sure?', :method => :delete, :title => "Delete Task" }%>
 
 <% unless task.is_open %>
-<%= link_to image_tag("/images/icons/bug--exclamation.png"), update_task_status_path(task.id, TaskStatus::PLANNING.id), :class => "get" %>
+<%= link_to image_tag("/images/icons/bug--exclamation.png"), update_task_status_path(task.id, TaskStatus::PLANNING.id), {:title => "Open Task", :class => "get"} %>
 <% end %>
 <% unless task.is_inprogress || true %>
-<%= link_to 'P', update_task_status_path(task.id, TaskStatus::INPROGRESS.id), :class => "get" %>
+<%= link_to 'P', update_task_status_path(task.id, TaskStatus::INPROGRESS.id), {:class => "get", :title => "Set to In-progress"} %>
 <% end %>
 <% unless task.is_complete %>
-<%= link_to image_tag("/images/icons/tick.png"), update_task_status_path(task.id, TaskStatus::COMPLETE.id), :class => "get" %>
+<%= link_to image_tag("/images/icons/tick.png"), update_task_status_path(task.id, TaskStatus::COMPLETE.id), {:class => "get", :title => "Set to Complete"} %>
 <% end %>

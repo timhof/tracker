@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100623170528) do
+ActiveRecord::Schema.define(:version => 20100702105831) do
 
   create_table "bug_statuses", :force => true do |t|
     t.string   "status"
@@ -105,6 +105,9 @@ ActiveRecord::Schema.define(:version => 20100623170528) do
     t.datetime "updated_at"
     t.string   "worker"
     t.integer  "usage_status_id"
+    t.string   "manual_file_name"
+    t.string   "manual_content_type"
+    t.integer  "manual_file_size"
   end
 
   create_table "sessions", :force => true do |t|
@@ -139,6 +142,22 @@ ActiveRecord::Schema.define(:version => 20100623170528) do
     t.string   "jtrac_code"
     t.string   "jtrac_project"
     t.integer  "task_status_id"
+    t.integer  "developer_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "duration"
+    t.string   "project"
+    t.integer  "priority"
+    t.integer  "report_id"
+  end
+
+  create_table "test_plans", :force => true do |t|
+    t.string   "name"
+    t.string   "plan"
+    t.string   "environment"
+    t.string   "status"
+    t.string   "test_results"
+    t.integer  "report_id"
     t.integer  "developer_id"
     t.datetime "created_at"
     t.datetime "updated_at"

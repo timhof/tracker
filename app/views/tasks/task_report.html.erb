@@ -1,0 +1,27 @@
+	<% StatusValue.new(0, 'whymustidothis') %>
+
+<div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
+<%  projectIds = @projectTaskListMap.keys.sort
+	projectIds.each do |project_id|
+      tasks = @projectTaskListMap[project_id] 
+      projectName = session[:selector].taskProjectIdNameMap[project_id]%>
+     <div style="margin:3px 0;background-color:#999CAF;color:#FFFFFF;padding:3px;border:1px solid;"><span style="font-weight:bold;font-size:18px;"><%= projectName %></span>
+<%    tasks.each do |task| 
+		status = "#{task.current_status_label}"
+		if task.task_status_id == TaskStatus::PLANNING.id || task.task_status_id == TaskStatus::QUEUED.id
+			status = "~ #{task.duration} days"
+		end
+		 
+		statusColor = "#999999"
+		if task.task_status_id == TaskStatus::INPROGRESS.id
+			statusColor = "#009E8E"
+		elsif task.task_status_id == TaskStatus::QUEUED.id || task.task_status_id == TaskStatus::PLANNING.id
+			statusColor = "#009E8E"
+		end%>
+		<div style="margin:3px;background-color:#FFFFFF;color:#000000;padding:10px;"><span style="font-weight:bold;"><%= task.name %></span> (<span style="font-weight:bold;color:<%= statusColor %>;"><%= status %></span>)
+		<%= task.description_html %>
+		</div>
+<%    end %>
+	</div>
+<%  end %>
+</div>

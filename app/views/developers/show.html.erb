@@ -17,11 +17,14 @@
 		<div class="yui-u"><%= @developer.status_description_html %></div>
 	</div></div>
 	<div class="yui-b show_div"><div class="yui-gd">
-    	<div class="yui-u first show_label">Open Tasks</div>
-		<div class="yui-u" id="open_tasks_div"><%= render :partial => 'show_task', :collection => @developer.open_tasks, :as => :task %><%= @developer.open_tasks.empty? ? "&nbsp;" : ""%></div>
-	</div></div>
-	<div class="yui-b show_div"><div class="yui-gd">
     	<div class="yui-u first show_label">In-progress Tasks</div>
 		<div class="yui-u" id="inprogress_tasks_div"><%= render :partial => 'show_task', :collection => @developer.inprogress_tasks, :as => :task %><%= @developer.inprogress_tasks.empty? ? "&nbsp;" : ""%></div>
+		<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Queued Tasks</div>
+		<div class="yui-u" id="inprogress_tasks_div"><%= render :partial => 'show_task', :collection => @developer.queued_tasks, :as => :task %><%= @developer.queued_tasks.empty? ? "&nbsp;" : ""%></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">In-test Tasks</div>
+		<div class="yui-u" id="open_tasks_div"><%= render :partial => 'show_task', :collection => @developer.testing_tasks, :as => :task %><%= @developer.testing_tasks.empty? ? "&nbsp;" : ""%></div>
 	</div></div>
 </div>

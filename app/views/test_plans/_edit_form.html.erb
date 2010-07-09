@@ -1,0 +1,53 @@
+
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Name</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :name%> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Environment</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :environment%> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Status</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_field :status%> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Plan</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_area :plan, {:rows => '10', :cols => '40', :class => 'editor'} %> 
+    	</div>
+    </div>
+  </div>
+
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Results</div>
+    	<div class="yui-u form_element_div">
+    		<%= f.text_area :test_results, {:rows => '10', :cols => '40', :class => 'editor'} %> 
+    	</div>
+    </div>
+  </div>
+ 
+<script type="text/javascript">
+  	$(document).ready(function() {
+		$('form:not(.filter) :input:visible:first').focus();
+		$(".form_element_div :first_child").clickOnEnter('#submit_button');
+  	} );
+</script>

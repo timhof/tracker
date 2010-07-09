@@ -1,8 +1,13 @@
 <% StatusValue.new(0, 'whymustidothis') %>
 <tr id="task_tr_<%= task.id %>" class="status_<%= task.task_status %>">
 	<td class="nowrap_cell"><%= render :partial => 'options', :locals => {:task => task} %></td>
+	<td><%= task.project %></td>
 	<td><%= task.name %></td>
 	<td><%= task.current_status_label %></td>
 	<td><%= task.developer.full_name %></td>
+	<td><%= task.priority %></td>
+	<td><%= link_to task.jtrac_code, task.jtrac_url %></td>
+	<td><%= task.duration %></td>
+	
 </tr>
 

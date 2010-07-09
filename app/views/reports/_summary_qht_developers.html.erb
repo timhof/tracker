@@ -1,0 +1,27 @@
+	<% StatusValue.new(0, 'whymustidothis') %>
+
+  <div style="font-weight:bold;font-size:18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">QHT Status</div>
+<% @developers.each do |developer| %>
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= developer.full_name %></span> <%= developer.status_description_html %>
+		<ul>
+			<li style="font-weight:bold;">Tasks (<%= developer.totalDuration %> Days)</li>
+			<ul>
+			
+			<% developer.inprogress_tasks.each do |task| %>
+				<li><%= task.name %><%= task.jtrac_code.empty? ? "" : " [#{link_to task.jtrac_code, task.jtrac_url}]" %> (<span style="color:#009E8E;font-weight:bold;"><i><%= task.current_status_label %></span></i>)<%= task.duration.nil? ? "" : " (#{task.duration} days)" %></li>
+			<% end %>
+			
+			<% developer.queued_tasks.each do |task| %>
+				<li><%= task.name %><%= task.jtrac_code.empty? ? "" : " [#{link_to task.jtrac_code, task.jtrac_url}]" %> (<span style="color:#1DD300;font-weight:bold;"><i><%= task.current_status_label %></span></i>)<%= task.duration.nil? ? "" : " (#{task.duration} days)" %></li>
+			<% end %>
+			
+			<% developer.planning_tasks.each do |task| %>
+				<li><%= task.name %><%= task.jtrac_code.empty? ? "" : " [#{link_to task.jtrac_code, task.jtrac_url}]" %> (<span style="color:#999999;font-weight:bold;"><i><%= task.current_status_label %></span></i>)<%= task.duration.nil? ? "" : " (#{task.duration} days)" %></li>
+			<% end %>
+			
+			</ul>
+		</ul>
+	</div>
+
+<% end %>
+  </div>

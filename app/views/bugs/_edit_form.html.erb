@@ -13,7 +13,7 @@
     <div class="yui-gf">
         <div class="yui-u first">Status</div>
     	<div class="yui-u form_element_div">
-    		<% StatusValue.new(0, 'whymustidothis')) %>
+    		<% StatusValue.new(0, 'whymustidothis') %>
     		<%= collection_select(:bug, :bug_status_id, BugStatus.values, :id, :label) %> 
     	</div>
     </div>

@@ -1,0 +1,10 @@
+
+<div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
+	<div style="font-weight:bold;font-size:18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">Issues</div>
+<%	showHR = false
+   	@issues.each_with_index do |issue, index| %>
+   <%= showHR ? "<hr style='width:95%;'/>" : "" %>
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= issue.name %></span> <%= issue.description_html %></div>
+<% 		showHR = true
+	end %>
+</div>

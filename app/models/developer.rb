@@ -1,7 +1,7 @@
 class Developer < ActiveRecord::Base
 	
 	has_many :reports
-	has_many :tasks
+	has_many :tasks, :order => "priority asc"
 	
 	validates_presence_of :first, :last, :email
 	
@@ -36,5 +36,34 @@ class Developer < ActiveRecord::Base
 	def queued_tasks
 		Task.tasks_by_status(tasks, TaskStatus::QUEUED)
 	end
+	
+	def planning_tasks
+		Task.tasks_by_status(tasks, TaskStatus::PLANNING)
+	end
+	
+	def testing_tasks
+		Task.tasks_by_status(tasks, TaskStatus::TEST)
+	end
+	
+	def totalDuration
+
+    	totalDays = 0
+     	inprogress_tasks.each do |task|
+     		unless task.duration.nil?
+       			totalDays = totalDays + task.duration
+   			end
+     	end
+     	queued_tasks.each do |task|
+     		unless task.duration.nil?
+       			totalDays = totalDays + task.duration
+   			end
+     	end
+     	planning_tasks.each do |task|
+     		unless task.duration.nil?
+       			totalDays = totalDays + task.duration
+   			end
+     	end
+     	return totalDays
+ 	end
 	
 end

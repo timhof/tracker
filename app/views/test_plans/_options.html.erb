@@ -1,0 +1,8 @@
+
+<% StatusValue.new(0, 'whymustidothis')%>
+<%= link_to image_tag("/images/icons/magnifier.png"), [report, test_plan], {:title => "Show Test Plan Details"} %>
+<%= link_to image_tag("/images/icons/edit-signiture.png"), edit_report_test_plan_path(report, test_plan), {:title => "Edit Test Plan Details"} %>
+<%= link_to image_tag("/images/icons/cross-script.png"), [report, test_plan], {:confirm => 'Are you sure?', :method => :delete, :title => 'Delete Test Plan'} %>
+
+
+

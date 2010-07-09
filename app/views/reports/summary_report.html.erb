@@ -1,24 +1,16 @@
 	<% StatusValue.new(0, 'whymustidothis') %>
 
 <div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
-	<div style="font-weight:bold;font-size:18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">QHT Status</div>
-<% @developers.each do |developer| %>
-	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= developer.full_name %></span> <%= developer.status_description_html %>
-		<ul>
-			<li style="font-weight:bold;">Tasks</li>
-			<ul>
-			<% developer.inprogress_tasks.each do |task| %>
-				<li><%= task.name %> (<span style="color:#009E8E;font-weight:bold;"><i><%= task.current_status_label %></span></i>)</li>
-			<% end %>
-			<% developer.queued_tasks.each do |task| %>
-				<li><%= task.name %> (<span style="color:#1DD300;font-weight:bold;"><i><%= task.current_status_label %></span></i>)</li>
-			<% end %>
-			</ul>
-		</ul>
-	</div>
+	
+	<%= render :partial => 'summary_qht_developers' %>
 
+<% if true %>
+	<%= render :partial => 'summary_qht_tasks' %>
+
+	<%= render :partial => 'summary_l5m_tasks' %>
+	
+	<%= render :partial => 'summary_l5m_reports' %>
 <% end %>
-</div>
 
 <div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
 	<div style="font-weight:bold;font-size:18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">Issues</div>
@@ -29,43 +21,4 @@
 <% 		showHR = true
 	end %>
 </div>
-
-<div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
-	<div style="font-weight:bold;font-size: 18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">L5M Development</div>
-<%	showHR = false
-   	@reports.each do |report| %>
-   <%= showHR ? "<hr/>" : "" %>
-	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= report.location %></span> 
-		<ul>
-			<li style="font-weight:bold;">Status</li>
-			<ul>
-				<li><%= report.current_status_label %></li>
-			</ul>
-<%	unless report.open_bugs.empty? %>
-			<li style="font-weight:bold;">Open Bugs</li>
-			<ul>
-			<% report.open_bugs.each do |bug| %>
-				<li><%= bug.name %></li>
-			<% end %>
-			</ul>
-<%	end
-	unless report.inprogress_bugs.empty? %>
-			<li style="font-weight:bold;">In-Progress Bugs</li>
-			<ul>
-				<% report.inprogress_bugs.each do |bug| %>
-					<li><%= bug.name %></li>
-				<% end %>
-			</ul>
-<% 	end
-	unless report.notes.empty? %>
-			<li style="font-weight:bold;">Notes</li>
-			<ul>
-				<li><%= report.notes_html %></li>
-			</ul>
-<% 	end %>
-
-		</ul>
-	</div>
-<% 		showHR = true
-	end %>
 </div>

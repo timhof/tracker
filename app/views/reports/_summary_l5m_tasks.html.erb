@@ -1,0 +1,11 @@
+
+<div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
+	<div style="font-weight:bold;font-size:18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">Open Tasks (L5M)</div>
+<% @unassigned_l5m.tasks.each do |task| %>
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span><%= task.name %></span>
+	<%if false %>
+		<%= task.description_html %>
+	<%end%>
+	</div>
+<% end %>
+</div>

@@ -1,5 +1,5 @@
 class TrackerStatus < TrackerEnumeration
-	
+
 	def self.findById(id)
 		self.keys.find {|key| self[key].id == id}
 	end

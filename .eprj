@@ -54,6 +54,8 @@
             <string>..\timothyimhof\public\stylesheets\oostyle.css</string>
             <key>REPORTSCON</key>
             <string>app\controllers\reports_controller.rb</string>
+            <key>REPORTTAB</key>
+            <string>app\views\reports\_report_table.html.erb</string>
             <key>ROUT</key>
             <string>config\routes.rb</string>
             <key>ROUTE</key>
@@ -76,6 +78,8 @@
             <string>app\views\reports\summary_report.html.erb</string>
             <key>TASK.R</key>
             <string>app\models\task.rb</string>
+            <key>TASKST</key>
+            <string>app\models\task_status.rb</string>
             <key>TASKSTAT</key>
             <string>app\models\task_status.rb</string>
             <key>TR</key>
@@ -286,6 +290,16 @@
             <string>..\stateli\test\unit\account_test.rb</string>
             <key>acount_jour</key>
             <string>..\stateli\app\views\stateli\account_journal.html.erb</string>
+            <key>add</key>
+            <string>db\migrate\20100607122844_add_name_to_bugs.rb</string>
+            <key>add_report</key>
+            <string>db\migrate\20100702105831_add_report_to_task.rb</string>
+            <key>addman</key>
+            <string>db\migrate\20100630005742_add_manual_to_reports.rb</string>
+            <key>addpri</key>
+            <string>db\migrate\20100701104027_add_priority_to_tasks.rb</string>
+            <key>addreport</key>
+            <string>db\migrate\20100623170528_add_report_rank_to_developers.rb</string>
             <key>ap</key>
             <string>public\javascripts\application.js</string>
             <key>apl</key>
@@ -486,10 +500,16 @@
             <string>..\stateli\test\unit\contract_test.rb</string>
             <key>contracttest</key>
             <string>..\stateli\test\unit\contract_test.rb</string>
+            <key>create_test</key>
+            <string>db\migrate\20100630105226_create_test_plans.rb</string>
+            <key>createtestpl</key>
+            <string>db\migrate\20100630105226_create_test_plans.rb</string>
             <key>cub</key>
             <string>..\tutor\public\stylesheets\cuba.css</string>
             <key>date</key>
             <string>..\stateli\app\views\stateli\_date_span_selector_pending.html.erb</string>
+            <key>demo</key>
+            <string>public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
             <key>demotable</key>
             <string>public\javascripts\dataTables-1.6\media\css\demo_table.css</string>
             <key>details</key>
@@ -503,6 +523,8 @@
             <key>developer.</key>
             <string>app\models\developer.rb</string>
             <key>developer.r</key>
+            <string>app\models\developer.rb</string>
+            <key>developer.rb</key>
             <string>app\models\developer.rb</string>
             <key>developerc</key>
             <string>app\controllers\developers_controller.rb</string>
@@ -643,7 +665,7 @@
             <key>option</key>
             <string>app\views\bugs\_options.html.erb</string>
             <key>options</key>
-            <string>app\views\bugs\_options.html.erb</string>
+            <string>app\views\reports\_options.html.erb</string>
             <key>pend</key>
             <string>..\stateli\app\views\stateli\_account_pending_details.html.erb</string>
             <key>pendin</key>
@@ -753,9 +775,9 @@
             <key>ro</key>
             <string>..\tutor\config\routes.rb</string>
             <key>rou</key>
-            <string>..\tutor\config\routes.rb</string>
-            <key>rout</key>
             <string>config\routes.rb</string>
+            <key>rout</key>
+            <string>test\unit\helpers\report_statuses_helper_test.rb</string>
             <key>route</key>
             <string>config\routes.rb</string>
             <key>routes</key>
@@ -791,18 +813,22 @@
             <key>sch</key>
             <string>db\schema.rb</string>
             <key>sche</key>
-            <string>..\stateli\db\schema.rb</string>
+            <string>db\schema.rb</string>
             <key>schem</key>
             <string>db\schema.rb</string>
             <key>schema</key>
             <string>db\schema.rb</string>
             <key>schema.</key>
             <string>db\schema.rb</string>
+            <key>sele</key>
+            <string>app\models\selector.rb</string>
             <key>select</key>
             <string>app\models\selector.rb</string>
             <key>selecto</key>
             <string>app\models\selector.rb</string>
             <key>selector</key>
+            <string>app\models\selector.rb</string>
+            <key>selector.</key>
             <string>app\models\selector.rb</string>
             <key>sess</key>
             <string>..\stateli\app\controllers\sessions_controller.rb</string>
@@ -862,6 +888,8 @@
             <string>app\views\reports\summary_report.html.erb</string>
             <key>summ</key>
             <string>app\views\reports\summary_report.html.erb</string>
+            <key>summa</key>
+            <string>app\views\reports\summary_report.html.erb</string>
             <key>summar</key>
             <string>app\views\reports\summary_report.html.erb</string>
             <key>summary</key>
@@ -874,10 +902,20 @@
             <string>app\models\task.rb</string>
             <key>task.rb</key>
             <string>app\models\task.rb</string>
+            <key>task_re</key>
+            <string>app\views\tasks\task_report.html.erb</string>
+            <key>task_rep</key>
+            <string>app\views\tasks\task_report.html.erb</string>
+            <key>task_report</key>
+            <string>app\views\tasks\task_report.html.erb</string>
+            <key>taskc</key>
+            <string>app\controllers\tasks_controller.rb</string>
             <key>taskcon</key>
             <string>app\controllers\tasks_controller.rb</string>
             <key>taskcontr</key>
             <string>app\controllers\tasks_controller.rb</string>
+            <key>taskre</key>
+            <string>app\views\tasks\task_report.html.erb</string>
             <key>tasks</key>
             <string>app\models\task_status.rb</string>
             <key>taskscon</key>
@@ -886,8 +924,14 @@
             <string>app\models\task_status.rb</string>
             <key>taskstat</key>
             <string>app\models\task_status.rb</string>
+            <key>taskstatus.rb</key>
+            <string>app\models\task_status.rb</string>
             <key>test_helper</key>
             <string>..\stateli\test\test_helper.rb</string>
+            <key>test_pa</key>
+            <string>app\models\test_plan.rb</string>
+            <key>testpl</key>
+            <string>app\models\test_plan.rb</string>
             <key>testscon</key>
             <string>app\controllers\test_statuses_controller.rb</string>
             <key>teststatusescon</key>
@@ -911,6 +955,8 @@
             <key>trackeren</key>
             <string>app\models\tracker_enumeration.rb</string>
             <key>trackerst</key>
+            <string>app\models\tracker_status.rb</string>
+            <key>trackerstat</key>
             <string>app\models\tracker_status.rb</string>
             <key>tran</key>
             <string>..\stateli\app\models\transaction.rb</string>

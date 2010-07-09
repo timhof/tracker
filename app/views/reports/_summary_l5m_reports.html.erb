@@ -1,0 +1,41 @@
+
+	
+<div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
+	<div style="font-weight:bold;font-size: 18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;">L5M Development</div>
+<%	showHR = false
+   	@reports.each do |report| %>
+   <%= showHR ? "<hr/>" : "" %>
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= report.location %></span> 
+		<ul>
+			<li style="font-weight:bold;">Status</li>
+			<ul>
+				<li><%= report.current_status_label %></li>
+			</ul>
+<%	unless report.open_bugs.empty? %>
+			<li style="font-weight:bold;">Open Bugs</li>
+			<ul>
+			<% report.open_bugs.each do |bug| %>
+				<li><%= bug.name %></li>
+			<% end %>
+			</ul>
+<%	end
+	unless report.inprogress_bugs.empty? %>
+			<li style="font-weight:bold;">In-Progress Bugs</li>
+			<ul>
+				<% report.inprogress_bugs.each do |bug| %>
+					<li><%= bug.name %></li>
+				<% end %>
+			</ul>
+<% 	end
+	unless report.notes.empty? %>
+			<li style="font-weight:bold;">Notes</li>
+			<ul>
+				<li><%= report.notes_html %></li>
+			</ul>
+<% 	end %>
+
+		</ul>
+	</div>
+<% 		showHR = true
+	end %>
+</div>

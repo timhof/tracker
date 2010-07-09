@@ -5,6 +5,9 @@ class Report < ActiveRecord::Base
 	belongs_to :jtrac, :class_name => "JTrac"
 	belongs_to :description, :dependent => :destroy
 	has_many :bugs, :dependent => :destroy
+	has_many :test_plans, :dependent => :destroy
+	has_many :tasks
+	has_attached_file :manual, :default_url => ""	
 	
 	accepts_nested_attributes_for :jtrac, :navigation, :description
 
@@ -126,5 +129,11 @@ class Report < ActiveRecord::Base
 	
 	def has_unresolved_bugs?
 		return num_unresolved_bugs > 0
+	end
+	
+	def self.all_reports_by_location
+		return Report.find(:all).sort do |report1, report2|
+			report1.location <=> report2.location
+		end
 	end
 end

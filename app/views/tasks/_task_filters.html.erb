@@ -2,9 +2,12 @@
 <%	form_tag(filter_tasks_path, {:class => 'ajaxForm', :id => 'filter_form' }) do %>
 	<div class="yui-b"><div class="yui-g">
 		<div id="status_checkbox_container" class="yui-u first">
-<%=		render :partial => 'reports/checkbox_group', :locals => {:idNameMap => session[:selector].taskStatusIdNameMap, :selectedKeys =>session[:selector].selectedTaskStatus, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'status', :title => 'Status
-lter'}%>
+<%=		render :partial => 'reports/checkbox_group', :locals => {:idNameMap => session[:selector].taskStatusIdNameMap, :selectedKeys =>session[:selector].selectedTaskStatus, :checkbox_container_div => 'status_checkbox_container', :parameterName => 'status', :title => 'Status'}%>
 		</div>
+		<div id="project_checkbox_container" class="yui-u">
+<%=		render :partial => 'reports/checkbox_group', :locals => {:idNameMap => session[:selector].taskProjectIdNameMap, :selectedKeys =>session[:selector].selectedTaskProjects, :checkbox_container_div => 'project_checkbox_container', :parameterName => 'project', :title => 'Project'}%>
+		</div>
+		
 	</div></div>
 	<input type="hidden" id="filter_commit" name="filter_commit" value="update" />
 <% 	end %>

@@ -49,7 +49,29 @@
 		<div class="yui-u" id="resolved_bugs_div"><%= render :partial => 'show_bug', :collection => @report.resolved_bugs, :as => :bug %><%= @report.resolved_bugs.empty? ? "&nbsp;" : ""%></div>
 	</div></div>
 	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Test Plans</div>
+		<div class="yui-u" id="test_plans_div"><%= render :partial => 'show_test_plan', :collection => @report.test_plans, :as => :test_plan %><%= @report.test_plans.empty? ? "&nbsp;" : ""%></div>
+	</div></div>
+	<div class="yui-b show_div"><div class="yui-gd">
     	<div class="yui-u first show_label">JTrac</div>
 		<div class="yui-u"><%= link_to @report.jtrac.url,  @report.jtrac.url %></div>
 	</div></div>
+	
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Related Tasks</div>
+		<div class="yui-u" id="tasks_div"><%= render :partial => 'developers/show_task', :collection => @report.tasks, :as => :task %><%= @report.tasks.empty? ? "&nbsp;" : ""%></div>
+	</div></div>
+	
+	<div class="yui-b show_div"><div class="yui-gd">
+    	<div class="yui-u first show_label">Manual</div>
+		<div class="yui-u">
+		<% if @report.manual_file_name.nil? %>
+			No Manual Available
+		<% else %>
+			<%= link_to 'Manual', @report.manual.url %>
+		<% end %>
+		</div>
+	</div></div>
+	
+	
 </div>

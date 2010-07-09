@@ -48,6 +48,12 @@
 			   if session[:selector].selectedColumns[:resolved_bugs] == '1' %>
 				<th><%=ReportsHelper::ColumnIdNameMap[:resolved_bugs]%></th>
 			<% end
+			   if session[:selector].selectedColumns[:test_plans] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:test_plans]%></th>
+			<% end
+			   if session[:selector].selectedColumns[:manual] == '1' %>
+				<th><%=ReportsHelper::ColumnIdNameMap[:manual]%></th>
+			<% end 
 			   if session[:selector].selectedColumns[:worker] == '1' %>
 				<th><%=ReportsHelper::ColumnIdNameMap[:worker]%></th>
 			<% end
@@ -111,6 +117,12 @@
 			<% end
 			   if session[:selector].selectedColumns[:resolved_bugs] == '1' %>
 	  			<td><%= report.resolved_bugs.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:test_plans] == '1' %>
+	  			<td><%= report.test_plans.size %></td>
+			<% end
+			   if session[:selector].selectedColumns[:manual] == '1' %>
+	  			<td><%= report.manual_file_name.nil? ? "N" : "Y" %></td>
 			<% end
 			   if session[:selector].selectedColumns[:worker] == '1' %>
 	  			<td><%= report.worker %></td>

@@ -14,7 +14,8 @@ class TrackerEnumeration
   end
   
   def TrackerEnumeration.values
-    @hash.values || []
+    values = @hash.values || []
+    values.sort
   end
   
   def TrackerEnumeration.keys

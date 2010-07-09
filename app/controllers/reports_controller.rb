@@ -38,6 +38,9 @@ class ReportsController < ApplicationController
 		session[:selector].selectedReportStatus[report.report_status_id] == '1'
 	}
 	
+	@unassigned_qht = Developer.find(:first, :conditions => "report_rank = -1")
+	@unassigned_l5m = Developer.find(:first, :conditions => "report_rank = -2")
+	
   	respond_to do |format|
       format.html {render :layout => false}
       format.xml  { render :xml => @reports }
@@ -75,7 +78,7 @@ class ReportsController < ApplicationController
   
   def set_filtered_reports
   	
-  	@all_reports = Report.find(:all)
+  	@all_reports = Report.find(:all, :include => :navigation, :order => "navigations.tier_1 asc, navigations.tier_2 asc, navigations.tier_3 asc")
 	@reports = @all_reports.select {|report| 
 		session[:selector].selectedTier2[report.nav_tier_2] == '1' &&
 		session[:selector].selectedMaintainer[report.developer_id] == '1' &&
@@ -112,11 +115,13 @@ class ReportsController < ApplicationController
   # GET /reports/new
   # GET /reports/new.xml
   def new
+  	
+	StatusValue.new(0, 'whymustidothis')
     @report = Report.new
 	@report.jtrac = JTrac.new
 	@report.description = Description.new
 	@report.navigation = Navigation.new
-	
+	@report.report_status_id = ReportStatus::TESTING_L5M.id
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @report }

@@ -1,7 +1,8 @@
 class Task < ActiveRecord::Base
 	
 	belongs_to :developer
-
+	belongs_to :report
+	
 	validates_presence_of :name
 	
 	def notes_html
@@ -27,6 +28,16 @@ class Task < ActiveRecord::Base
 		end
 	end
 	
+	def self.unassigned_tasks
+		Task.find(:all, :conditions => "task_status_id = #{TaskStatus::PLANNING.id}")
+	end
+	
+	def self.project_tasks(project_id)
+		project_tasks = Task.find(:all).select do |task|
+			task.project_id == project_id
+		end
+	end
+	
 	def is_open
 		task_status_id == TaskStatus::PLANNING.id
 	end
@@ -37,6 +48,10 @@ class Task < ActiveRecord::Base
 	
 	def is_complete
 		task_status_id == TaskStatus::COMPLETE.id
+	end
+	
+	def project_id
+		project.nil? ? "_" : project.gsub(" ", "_")
 	end
 end
 

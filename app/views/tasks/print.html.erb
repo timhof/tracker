@@ -1,0 +1,15 @@
+<% StatusValue.new(0, 'whymustidothis') %>
+<div style="border: 1px solid;margin:5px;padding:5px;background-color:#EDEDED;">
+	<div style="font-weight:bold;font-size:18px;height:30px;line-height:30px;border:1px solid #4C5275;background-color:#999CAF;color:white;padding:3px;"><%= @task.name %></div>
+
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span><%= @task.description_html %></div>
+
+<% if not @task.notes.empty? %>
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= @task.notes_html %></div>
+<% end %>
+
+<% if not @task.jtrac_url.empty? %>
+	<div style="margin:3px;background-color:#FFFFFF;padding:3px;"><span style="font-weight:bold;"><%= link_to @task.jtrac_url,  @task.jtrac_url %></div>
+<% end %>
+
+</div>

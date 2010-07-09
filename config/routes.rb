@@ -12,6 +12,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :j_tracs
 
   map.resources :reports do |report|
+  	report.resources :test_plans
   	report.resources :bugs
   end
   
@@ -25,6 +26,9 @@ ActionController::Routing::Routes.draw do |map|
   
   map.reports_index_print 'reports_index_print', :controller => "reports", :action => "index_print"
   map.summary_report 'summary_report', :controller => "reports", :action => "summary_report"
+  map.task_report 'task_report', :controller => "tasks", :action => "task_report"
+  
+  map.print_task 'print_task/:id', :controller => "tasks", :action => "print"
   
   map.all_bugs '/all_bugs', :controller => 'bugs', :action => 'index'
   
@@ -32,7 +36,6 @@ ActionController::Routing::Routes.draw do |map|
   map.update_bug_status '/update_bug_status/:id/:bug_status_id', :controller => 'bugs', :action => 'update_bug_status'
  
   map.update_report_status '/update_report_status/:id/:report_status_id', :controller => 'reports', :action => 'update_report_status'
-  
   map.update_task_status '/update_task_status/:id/:task_status_id', :controller => 'tasks', :action => 'update_task_status'
   
   # The priority is based upon order of creation: first created -> highest priority.

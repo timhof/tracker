@@ -9,7 +9,9 @@ class Selector
 					  :reportStatusIdNameMap,
 					  :selectedReportStatus,
 					  :taskStatusIdNameMap,
-					  :selectedTaskStatus
+					  :selectedTaskStatus,
+					  :taskProjectIdNameMap,
+					  :selectedTaskProjects
 					  
 					  
 	def initialize
@@ -18,6 +20,7 @@ class Selector
 		initialize_report_statuses
 		initialize_bug_statuses
 		initialize_task_statuses
+		initialize_task_projects
 	end
 	
 	def initialize_columns
@@ -36,6 +39,8 @@ class Selector
 						:open_bugs => '0',
 						:inprogress_bugs => '0',
 						:resolved_bugs => '0',
+						:test_plans => '0',
+						:manual => '0',
 						:jtrac => '1',
 						:date_updated => '0', 
 						:notes => '0'
@@ -56,7 +61,7 @@ class Selector
 			
 			tempMaintainerIdNameMap[report.developer_id] = report.developer.full_name
 			nav_tier_1_2 = "#{report.navigation.tier_1}_#{report.navigation.tier_2}"
-			tier_1_2_hash[nav_tier_1_2] = "#{report.navigation.package}_#{report.navigation.category}"
+			tier_1_2_hash[nav_tier_1_2] = "#{report.navigation.package} | #{report.navigation.category}"
 			
 			if select_all
 				@selectedMaintainer[report.developer_id] = '1'
@@ -94,6 +99,19 @@ class Selector
   		@taskStatusIdNameMap = tempTaskStatusIdNameMap.sort
 	end
 	
+	def initialize_task_projects(select_all=true)
+		if select_all
+			@selectedTaskProjects = {}
+		end
+		@taskProjectIdNameMap = {}
+  		Task.find(:all).each do |task| 
+  			if select_all
+  				@selectedTaskProjects[task.project_id] = '1'
+  			end
+  			@taskProjectIdNameMap[task.project_id] = task.project
+  		end
+	end
+	
 	def initialize_report_statuses
 		StatusValue.new(0, 'whymustidothis')
 		@selectedReportStatus = {}
@@ -109,6 +127,10 @@ class Selector
 	
 	def confirm_report_data
 		initialize_report_filters(false)
+	end
+	
+	def confirm_task_data
+		initialize_task_projects(false)
 	end
 
 end

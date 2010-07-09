@@ -9,6 +9,13 @@
  
   <div class="yui-b selection_div">
     <div class="yui-gf">
+        <div class="yui-u first">Project</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :project %></div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
         <div class="yui-u first">Developer</div>
     	<div class="yui-u form_element_div">
     		<%= collection_select(:task, :developer_id, Developer.find(:all, :order => "first, last"), :id, :full_name) %>
@@ -22,6 +29,13 @@
     	<div class="yui-u form_element_div">
     		<%= collection_select(:task, :task_status_id, TaskStatus.values, :id, :label) %> 
     	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Duration</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :duration %></div>
     </div>
   </div>
   
@@ -40,6 +54,13 @@
     	<div class="yui-u form_element_div">
     		<%= f.text_area :notes, {:rows => '2', :cols => '80', :class => 'advanced_editor'} %> 
     	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div advanced_edit">
+    <div class="yui-gf">
+        <div class="yui-u first">Priority</div>
+    	<div class="yui-u form_element_div"><%= f.text_field :priority %></div>
     </div>
   </div>
   
@@ -66,6 +87,15 @@
         <div class="yui-u first">JTrac URL</div>
     	<div class="yui-u form_element_div">
     		<%= f.text_field :jtrac_url, {:size => '100'}%> 
+    	</div>
+    </div>
+  </div>
+  
+  <div class="yui-b selection_div">
+    <div class="yui-gf">
+        <div class="yui-u first">Report</div>
+    	<div class="yui-u form_element_div">
+    		<%= collection_select(:task, :report_id, Report.all_reports_by_location, :id, :location) %>
     	</div>
     </div>
   </div>
